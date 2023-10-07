@@ -27,7 +27,7 @@ time, mark, audio, video {
   padding: 0;
   border: 0;
   font-size: 100%;
-  font: monument;
+  font-family: monument;
   vertical-align: baseline; }
 
 article, aside, details, figcaption, figure,
