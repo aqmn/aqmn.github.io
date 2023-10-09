@@ -1,0 +1,100 @@
+<style>
+@font-face { font-family: monument; src: url("fonts/MonumentExtended-Regular.otf"); } 
+@font-face { font-family: urban; src: url("fonts/Urbanchrome Outline.ttf"); } 
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.video-background video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: relative;
+}
+
+.centered {
+    text-align: center;
+    color: #ffffff;
+}
+
+h1 {
+    font-size: 5em;
+    margin: 0;
+}
+
+p {
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+
+a {
+    font-family: monument;
+    font-size: 0.8rem;
+    display: inline-block;
+    margin-top: 20px;
+    padding: 1% 1%;
+    background-color: transparent;
+    
+    /* opacity: 50%; */
+    border-width: 1px;
+    border-style: solid;
+    color: silver;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+a:hover {
+    color:white;
+}
+
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="video-background">
+        <video autoplay muted loop playsinline poster="video-poster.jpg">
+            <source src="bgv.mp4" type="video/mp4">
+            <!-- Add additional video formats here for better browser compatibility -->
+        </video>
+    </div>
+
+    <div class="content">
+        <div class="centered">
+            <h1 style="font-family: urban; font-size: 6rem;">404</h1>
+            <p style="font-family: monument;font-size: 1rem; padding-left: 10vw ; padding-right: 10vw;"> Are you sure you are on the right track?</p>
+            <a href="/">Home</a>
+        </div>
+    </div>
+</body>
+</html>
