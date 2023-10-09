@@ -1,6 +1,7 @@
 
 @font-face { font-family: monument; src: url("fonts/MonumentExtended-Regular.otf"); } 
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Manrope:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Manrope:wght@200&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Manrope:wght@600&display=swap'); */
 
 /* Reset some default styles */
 a{
@@ -8,13 +9,16 @@ a{
     text-decoration:none
     
 }
+
 a:hover{
     color: black;
 }
+
 body{
     margin: 0;
     padding: 0;
-    background-color: rgb(240,240,240);
+    background-color: rgb(246,246,246);
+    text-align: center;
 }
 
 html {
@@ -92,11 +96,12 @@ stext{
 }
 
 rf{
+    /* left: 50vh;
+    transform: translateX(-50%); */
     font-size: 0.5rem;
-    font-family: 'Manrope', sans-serif;
-    position: fixed; /* Fixed position to keep it at the bottom */
+    font-family: 'Archivo Black', sans-serif;
+    /* position: fixed;  */
     bottom: 5vh; /* Adjust this value as needed (e.g., 5vh = 5% of the viewport height) */
-    left: 50%;
-    transform: translateX(-50%);
+    width: 100vw;
     color:grey
 }
