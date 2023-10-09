@@ -35,7 +35,7 @@ html {
 .video-container {
     position: relative;
     width: 100%;
-    height: 50vh; /* 60% of the viewport height */
+    height: 60vh; /* 60% of the viewport height */
     overflow: hidden;
 }
 
@@ -56,7 +56,7 @@ html {
 /* Center text in the remaining area */
 .text-container {
     max-width: 100vw;
-    font-size: 2rem;
+    font-size: 1.5rem;
     position: absolute;
     font-family: urban;
     top: 50%;
