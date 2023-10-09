@@ -432,7 +432,7 @@ a,button,button:focus{
 }
 
 .home-title {
-    font-size: 400%;
+    font-size: 5vw; /* name size */
     text-transform: capitalize;
     max-width: 695px;
     margin: 0 auto;
