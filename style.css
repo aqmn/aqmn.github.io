@@ -1,0 +1,87 @@
+
+@font-face { font-family: monument; src: url("fonts/MonumentExtended-Regular.otf"); } 
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Manrope:wght@600&display=swap');
+
+/* Reset some default styles */
+a{
+    color: silver;
+    text-decoration:none
+    
+}
+a:hover{
+    color: black;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set video container to fill the upper 60% of the screen */
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 60vh; /* 60% of the viewport height */
+    overflow: hidden;
+}
+
+/* Style the video to cover the entire container and center it */
+.video-container video {
+    /* opacity: 80%; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+}
+
+/* Center text in the remaining area */
+.text-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff; /* Text color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for readability */
+}
+
+/* Style the footer */
+footer {
+    height: 40vh;
+    background-color:transparent; /* Transparent black background */
+    text-align: center;
+    padding: 10px 0;
+    color: grey; /* Text color */
+    font-family: monument;
+    /* font-family: 'Archivo Black', sans-serif;
+    font-family: 'Manrope', sans-serif; */
+}
+
+stext{
+    font-size: 1rem;
+}
+
+.shining-text {
+    font-size: 3rem;
+    background: linear-gradient(90deg, #aaa, #eee, #aaa); /* Silver gradient */
+    background-size: 200% 100%;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: shine 5s linear infinite; /* Animation for shine effect */
+}
+
+/* Animation keyframes for the shine effect */
+@keyframes shine {
+    0% {
+        background-position: -200% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
