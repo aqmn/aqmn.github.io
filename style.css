@@ -123,6 +123,14 @@ stext{
     color:grey
 }
 
+selected{
+    color:black
+}
+
+unselected{
+    color:grey
+}
+
 ul {
     list-style: none;
     margin: 0;
