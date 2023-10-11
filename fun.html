@@ -26,6 +26,7 @@
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
+            /* max-width: 100vw; */
         }
 
         /* Video background container */
@@ -61,6 +62,7 @@
             /* padding: 2rem; */
             font-size: 1.5rem;
             font-family: neue;
+            max-width: 100vw;
         }
 
         .main-content h2 {
@@ -100,7 +102,7 @@
 
         /* Slideshow container */
         .slideshow-container {
-        max-width: 60vw;
+        /* max-width: 60vw; */
         position: relative;
         margin: auto;
         }
@@ -184,6 +186,70 @@
         to {opacity: 1}
         }
 
+        @media (orientation: landscape) {
+            .slideshow-container {
+                max-width: 70vw; 
+            }
+
+            .surr{
+                float: left; 
+                max-width: 30vw; 
+                padding-right: 2vw;
+            }
+
+            /* .main-content-c {
+            padding-left: 1vw;
+            padding-right: 1vw;
+            padding-top: 1rem;
+            font-size: 1.5rem;
+            font-family: neue;
+        } */
+
+        /* .main-content-c p{
+            padding-left: 1vw;
+            padding-right: 1vw;
+            padding-top: 1rem;
+            font-size: 1.5rem;
+            font-family: neue;
+        }    */
+        }
+
+        @media (orientation: portrait) { 
+            .slideshow-container {
+                max-width: 90vw; 
+            }
+
+            .surr{
+                max-width: 80vw; 
+                padding-left: 20vw;
+                /* text-align: center; */
+            }
+
+            /* .main-content-c{
+            text-align: center;
+            padding-left: 1vw;
+            padding-right: 1vw;
+            padding-top: 1rem;
+            font-size: 1.5rem;
+            font-family: neue;
+            }
+            .main-content-c p{
+                padding-left: 1vw;
+                padding-right: 1vw;
+                padding-top: 1rem;
+                font-size: 1.5rem;
+                font-family: neue;
+            } */
+
+        }
+
+        p{
+        margin: 0;
+        padding: 0;
+        }
+
+        
+        
     </style>
 </head>
 <body>
@@ -208,45 +274,72 @@
                 The freezing temperature (~-25°C/-13°F) restricted my movements to a great extent. For the most of the time, I stayed in the hotel and waited. 
                 Yet it's still an unforgettable experience in my life. Below are some photos I shot on my iPhone 13 Pro with a tripod: 
                 <br>
+                
             </p>
-            
-            <div class="slideshow-container">
+            <br>
 
+            <div class="slideshow-container">
                 <!-- Full-width images with number and caption text -->
                 <div class="mySlides fade">
-                  <div class="numbertext">1 / </div>
+                  <div class="numbertext">1 / 10</div>
                   <img src="foto/a (1).png" style="width:100%">
-                  <div class="text">Caption Text</div>
+                  <!-- <div class="text">Caption Text</div> -->
                 </div>
               
                 <div class="mySlides fade">
-                  <div class="numbertext">2 / </div>
+                  <div class="numbertext">2 / 10</div>
                   <img src="foto/a (2).png" style="width:100%">
-                  <div class="text">Caption Two</div>
+                  <!-- <div class="text">Caption Two</div> -->
                 </div>
               
                 <div class="mySlides fade">
-                  <div class="numbertext">3 / </div>
+                  <div class="numbertext">3 / 10</div>
                   <img src="foto/a (3).png" style="width:100%">
-                  <div class="text">Caption Three</div>
+                  <!-- <div class="text">Caption Three</div> -->
                 </div>
                 
                 <div class="mySlides fade">
-                    <div class="numbertext">4 / 3</div>
+                    <div class="numbertext">4 / 10</div>
                     <img src="foto/a (4).png" style="width:100%">
-                    <div class="text">Caption Three</div>
+                    <!-- <div class="text">Caption Three</div> -->
                 </div>
 
                 <div class="mySlides fade">
-                    <div class="numbertext">5 / 3</div>
+                    <div class="numbertext">5 / 10</div>
                     <img src="foto/a (5).png" style="width:100%">
-                    <div class="text">Caption Three</div>
+                    <!-- <div class="text">Caption Three</div> -->
+                </div>
+
+
+                <div class="mySlides fade">
+                    <div class="numbertext">6 / 10</div>
+                    <img src="foto/a (6).png" style="width:100%">
+                    <!-- <div class="text">Caption Three</div> -->
+                </div>
+
+
+                <div class="mySlides fade">
+                    <div class="numbertext">7 / 10</div>
+                    <img src="foto/a (7).png" style="width:100%">
+                    <!-- <div class="text">Caption Three</div> -->
                 </div>
 
                 <div class="mySlides fade">
-                    <div class="numbertext">5 / 3</div>
-                    <img src="foto/a (6).png" style="width:100%">
-                    <div class="text">Caption Three</div>
+                    <div class="numbertext">8 / 10</div>
+                    <img src="foto/a (8).png" style="width:100%">
+                    <!-- <div class="text">Caption Three</div> -->
+                </div>
+                
+                <div class="mySlides fade">
+                    <div class="numbertext">9 / 10</div>
+                    <img src="foto/a (9).png" style="width:100%">
+                    <!-- <div class="text">Caption Three</div> -->
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">10 / 10</div>
+                    <img src="foto/a (10).png" style="width:100%">
+                    <!-- <div class="text">Caption Three</div> -->
                 </div>
               
                 <!-- Next and previous buttons -->
@@ -263,34 +356,41 @@
                 <span class="dot" onclick="currentSlide(4)"></span>
                 <span class="dot" onclick="currentSlide(5)"></span>
                 <span class="dot" onclick="currentSlide(6)"></span>
+                <span class="dot" onclick="currentSlide(7)"></span>
+                <span class="dot" onclick="currentSlide(8)"></span>
+                <span class="dot" onclick="currentSlide(9)"></span>
+                <span class="dot" onclick="currentSlide(10)"></span>
+                <!-- <span class="dot" onclick="currentSlide(6)"></span> -->
             </div>
             
     </div>
 
     <div class="main-content">  
+            <p><ask># My favorite book </ask></p>
 
-        <p >
-            <ask># My favorite book </ask>
-                <br>
-                I used this book when I took <a href="https://hilbert.math.wisc.edu/415-Applied-Dynamical-Systems-Chaos-Modeling">MATH 415</a>, my favourite course took at UW-Madison. It covers many topics in physics, which I am really interested in but also feared of. This book covers first-order differential equations and their bifurcations, followed by phase plane analysis, limit cycles, and their bifurcations, 
-                and culminating with the Lorenz equations, chaos, iterated maps, period doubling, renormalization, fractals, and strange attractors, step by step with intuitive presentation and straightforward explanation.
+                <div>
+                <!-- <figure>
+                    <img class="surr"  src="foto/cover.jpg">
+                    <figcaption>Title</figcaption>
+                </figure> -->
+                
+                <img class="surr"  src="foto/cover.jpg">
+
+                <p >
+                <!-- style="text-align: justify;" is for making space to make up the entire line -->
+                I used this book - 
+                <a href="https://www.stevenstrogatz.com/books/nonlinear-dynamics-and-chaos-with-applications-to-physics-biology-chemistry-and-engineering">
+                <i>Nonlinear Dynamics and Chaos</i></a>  by <a href="https://www.stevenstrogatz.com/">Steven Strogatz</a>
+                when I took <a href="https://hilbert.math.wisc.edu/415-Applied-Dynamical-Systems-Chaos-Modeling">MATH 415</a>, 
+                my favourite course at UW-Madison. It covers many topics in physics, which I am really interested in but also feared of. This book covers first-order differential equations and their bifurcations, followed by phase plane analysis, limit cycles, and their bifurcations, 
+                and culminating with the Lorenz equations, chaos, iterated maps, period doubling, renormalization, fractals, and strange attractors, step by step with straightforward presentations and intuitive explanations.
                 <br>
                 Anyway, it is really a great book to read, even for outsiders.
                 Later I found out the author is actually working in my graduate school. What a coincidence!
                 </p>
 
-        <!-- <p> Previously I studied mathematics at 
-            <a href="https://wisc.edu">University of Wisconsin-Madison</a> for my bachelor's degree.
-            
-             If you are interested, see my previous previous work <a href="https://sites.google.com/view/prevcs/home">here</a>. </p>
+                </div>
 
-        <p>My specialities are software engineering, data analysis, and math.
-            I am also interested in linguistics, biostatistics, nonlinear system and applied mathematical modeling.</p> -->
-
-        <!-- <P>This website is composed by Lingyu Zhou based on HTML and CSS purely, hosted by <a href="https://www.aliyun.com/product/oss">Alibaba Cloud OSS</a>.</p>
-            
-        <p>All contents under this second level domain are licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a>.</p> -->
-        <!-- <p xmlns:cc="http://creativecommons.org/ns#" >All contents under this second level domain are licensed under <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-ND 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nd.svg?ref=chooser-v1"></a></p> -->
         <p style="text-align: right;"><a href="#video-container">Back to top↑</a></p>
     </div>
     <footer>Powered by Lingyu Zhou, under license to  <a href="https://khentmt.com">KH Entertainment</a> © (2012-2023) All rights reserved. </footer>
@@ -325,5 +425,6 @@
         dots[slideIndex-1].className += " active";
         }
     </script>
+
 </body>
 </html>
