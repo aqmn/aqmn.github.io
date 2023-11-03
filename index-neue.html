@@ -9,8 +9,8 @@
         @font-face { font-family: code; src: url("fonts/SourceCodePro-Regular.otf"); } 
         
         ::selection {
-          /* color: blue;  */
-          background: blue; 
+          color: lightgreen; 
+          background: transparent; 
         }
 
         body {
@@ -26,7 +26,7 @@
             padding-top: 25vh;
             font-size: 3.5em;
             margin: 5vh 0;
-            font-family: code;
+            font-family: neue;
             letter-spacing: -0.5px;
             color:white;
             font-stretch:wider;
@@ -35,7 +35,7 @@
         p {
             font-size: 1em;
             margin: 2vh 0;
-            font-family: code;
+            font-family: neue;
             letter-spacing: -0.5px;
 
         }
@@ -43,7 +43,7 @@
         itm{
             font-size: 1em;
             margin: 2vh 0;
-            font-family: code;
+            font-family: neue;
             letter-spacing: -0.5px;
         }
 
@@ -51,9 +51,9 @@
             background-color: transparent;
             font-size: 1em;
             border: none;
-            font-family: code;
+            font-family: neue;
             color:white;
-            letter-spacing: -1px;
+            letter-spacing: -0.5px;
             
             
         }
@@ -69,7 +69,7 @@
         footer{
             font-size: 0.5rem;
             margin: 2vh 0;
-            font-family: code;
+            font-family: neue;
             color:white;
             padding-top: 25vh;
             
@@ -100,7 +100,7 @@
 </body> -->
 <body>
   <h1><span id="demo"></span></span><span class="blinking">_</span></h1>
-    <button class="collapsible">Contact＋ </button>
+    <button class="collapsible">Contact ＋ </button>
     <div class="collapsible-content">
         <itm><a href=mailto:admin@zhoulingyu.net>E-Mail</a></itm>
       <br>
@@ -136,10 +136,10 @@ collapsibleButtons.forEach(button => {
     const content = this.nextElementSibling;
     if (content.style.display === "block") {
       content.style.display = "none";
-      this.textContent = "Contact＋";
+      this.textContent = "Contact ＋";
     } else {
       content.style.display = "block";
-      this.textContent = "Contact－";
+      this.textContent = "Contact －";
     }
   });
 
@@ -151,7 +151,7 @@ collapsibleButtons.forEach(button => {
 
 /* Typer: */
 var i = 0;
-var txt = 'Lingyu Zhou'; /* The text */
+var txt = 'LINGYU ZHOU'; /* The text */
 var speed = 100; /* The speed/duration of the effect in milliseconds */
 
 function typeWriter() {
