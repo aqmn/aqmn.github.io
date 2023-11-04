@@ -16,7 +16,6 @@
         body {
             /* background-color:rgb(39,93,43); */
             background-color:black;
-            
             color: white;
             font-family: Arial, sans-serif;
             text-align: center;
@@ -28,12 +27,12 @@
             margin: 5vh 0;
             font-family: code;
             letter-spacing: -0.5px;
-            color:white;
-            font-stretch:wider;
+            /* color:white; */
+            /* font-stretch:wider; */
         }
 
         p {
-            font-size: 1em;
+            font-size: 3vmin;
             margin: 2vh 0;
             font-family: code;
             letter-spacing: -0.5px;
@@ -52,29 +51,31 @@
             font-size: 3vmin;
             border: none;
             font-family: code;
-            color:white;
+            /* color:white; */
             letter-spacing: -1px;
             cursor: pointer;
-            
-        }
+        } 
 
       
 
         a{
-        /* color:rgb(107,230,209); */
-        color:cyan;
         text-decoration: None;
+        font-family: code;
         }
 
         footer{
-            font-size: 1.5vmin;
+            font-size: 0.5rem;
             margin: 2vh 0;
             font-family: code;
-            color:white;
+            /* color:white; */
             padding-top: 25vh;
             
         }
 
+        img{
+          width: 1vw;
+          /* filter:invert(1); */
+        }
 
         .blinking {
           animation: blink 1s steps(1, end) infinite;
@@ -92,19 +93,17 @@
     </style>
     
 </head>
-<!-- <body>
-    <h1>LINGYU ZHOU</h1>
-    <p>Instagram</p>
-    <p>Twitter</p>
-    <p>LinkedIn</p>
-</body> -->
+<header style="background-color: transparent;">
+  <button id="colorModeButton"><img src="switch.png" ></button>
+</header>
 <body>
   <h1><span id="demo"></span></span><span class="blinking">_</span></h1>
-    <button class="collapsible">Contact＋ </button>
+
+    <p class="collapsible" style="cursor: pointer;">Contact＋ </p>
     <div class="collapsible-content">
-        <itm><a href=mailto:admin@zhoulingyu.net>E-Mail</a></itm>
+      <itm><a href=mailto:admin@zhoulingyu.net>E-Mail</a></itm>
       <br>
-        <itm><a href=https://www.linkedin.com/in/lingyuzhou>LinkedIn</a></itm>
+      <itm><a href=https://www.linkedin.com/in/lingyuzhou>LinkedIn</a></itm>
       <br>
       <itm><a href=https://instagram.com/toqurdn>Instagram</a></itm>
       <br>
@@ -113,12 +112,11 @@
       <itm><a href=https://twitter.com/uygniluohz>X</a></itm>
       <br>
       <itm><a href=https://weibo.com/u/5663761733>Weibo</a></itm>
-      
     </div>
-    <br>
-    <a style="color: white;" href=https://zhoulingyu.net/files/cv_lzhou.pdf><button>CV</button></a>
-    <br>
-    <a style="color: white;" href=https://sites.google.com/view/prevcs/home><button>Portfolio</button></a>
+    <!-- <br> -->
+    <p><a  href=https://zhoulingyu.net/files/cv_lzhou.pdf>CV</a></p>
+    <!-- <br> -->
+    <p><a href=https://sites.google.com/view/prevcs/home>Portfolio</a></p>
     
     
     
@@ -165,7 +163,22 @@ function typeWriter() {
 window.onload = function() {
   typeWriter(); // Call the function when the page is loaded
 }
+
+
+document.getElementById("colorModeButton").addEventListener("click", function() {
+      const body = document.body;
+      const img = document.getElementById("img");
+      if (body.style.backgroundColor === "white") {
+        body.style.backgroundColor = "black";
+        body.style.color = "white";
+        img.style.filter = "none"; // Reset the filter property
+      } else {
+        body.style.backgroundColor = "white";
+        body.style.color = "black"; 
+        img.style.filter = "invert(1)"; // Apply the invert filter
+      }
+    });
 </script>
 </body>
-<footer>Powered by Lingyu Zhou, under license to  <a href="https://khentmt.com">KH Entertainment</a> © (2012-2023) All rights reserved. </footer>
+<footer>Powered by Lingyu Zhou, under license to  <a style="color: cyan;" href="https://khentmt.com">KH Entertainment</a> © (2012-2023) All rights reserved. </footer>
 </html>
