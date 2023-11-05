@@ -1,77 +1,98 @@
 <!DOCTYPE html>
 <title>Lingyu Zhou</title>
+<link rel="icon" href="seologo.png" type="image/png">
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         @font-face { font-family: neue; src: url("fonts/NeueHaasDisplayBold.ttf"); } 
         @font-face { font-family: made; src: url("fonts/MADE.otf"); } 
-        @font-face { font-family: code; src: url("fonts/CONSOLA.TTF"); } 
+        @font-face { font-family: code; src: url("fonts/SourceCodePro-Regular.otf"); } 
+        @font-face { font-family: hn; src: url("fonts/HelveticaNeue-HeavyExt.otf"); } 
+        
         
         ::selection {
-          /* color: blue;  */
-          background: blue; 
+          /* color: orangered; */
+          background: transparent; 
+          color:grey;
         }
 
+        
         body {
             /* background-color:rgb(39,93,43); */
             background-color:black;
-            
+            font-size: 5vmin;
             color: white;
             font-family: Arial, sans-serif;
-            text-align: center;
+            text-align: left;
         }
 
         h1 {
-            padding-top: 25vh;
+            padding-top: 15vh;
             font-size: 15vmin;
             margin: 5vh 0;
-            font-family: code;
+            /* font-family: hn; */
+            font-family: hn;
             letter-spacing: -0.5px;
-            color:white;
-            font-stretch:wider;
-        }
-
-        p {
-            font-size: 1em;
-            margin: 2vh 0;
-            font-family: code;
-            letter-spacing: -0.5px;
-
+            /* color:orangered; */
         }
 
         itm{
             font-size: 3vmin;
             margin: 2vh 0;
-            font-family: code;
+            font-family: neue;
             letter-spacing: -0.5px;
         }
 
         button{
             background-color: transparent;
-            font-size: 5vmin;
+            font-size: 10vmin;
             border: none;
-            font-family: code;
-            color:white;
-            letter-spacing: -1px;
+            font-family: neue;
+            color:orangered;
+            letter-spacing: -0.5px;
             cursor: pointer;
             
         }
 
-      
+        button:hover{
+          color:cyan;
+          
+        }
+
+        p {
+            font-size: 1em;
+            margin: 2vh 0;
+            font-family: neue;
+            letter-spacing: -0.5px;
+
+        }
 
         a{
         /* color:rgb(107,230,209); */
-        color:cyan;
+        color:orangered;
         text-decoration: None;
         }
 
+        header{
+        font-size: 10vmin;
+        color:orangered;
+        font-family: neue;
+        text-align: left;
+        }
+
+        a:hover{
+            color: cyan;
+        }
+
+
         footer{
-            font-size: 1.5vmin;
+            font-size: 0.5rem;
             margin: 2vh 0;
-            font-family: code;
+            font-family: neue;
             color:white;
             padding-top: 25vh;
+            text-align: center;
             
         }
 
@@ -89,57 +110,140 @@
           }
         }
 
+
+        /*-----------------nav bar----------------*/
+
+        /* The Overlay (background) */
+            .overlay {
+            /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+            height: 0%;
+            width: 100%;
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            background-color: rgb(0,0,0); /* Black fallback color */
+            background-color: rgba(0,0,0); /* Black w/opacity */
+            overflow-y: hidden; /* Disable horizontal scroll */
+            transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+            }
+
+            /* Position the content inside the overlay */
+            .overlay-content {
+            position: relative;
+            top: 25%; /* 25% from the top */
+            width: 100%; /* 100% width */
+            text-align: center; /* Centered text/links */
+            margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+            }
+
+            /* The navigation links inside the overlay */
+            .overlay a {
+            /* padding: 8px; */
+            text-decoration: none;
+            font-size: 10vmin;
+            color: orangered;
+            display: block; /* Display block instead of inline */
+            transition: 0.3s; /* Transition effects on hover (color) */
+            }
+
+            /* When you mouse over the navigation links, change their color */
+            .overlay a:hover, .overlay a:focus {
+            color: cyan;
+            }
+
+            /* Position the close button (top right corner) */
+            .overlay .closebtn {
+            /* position: absolute;
+            top: 20px;
+            right: 45px;
+            font-size: 60px; */
+            }
+
+            .downscroll a:hover{
+                color: cyan
+            }
+            /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+            @media screen and (max-height: 450px) {
+            .overlay a {font-size: 20px}
+            .overlay .closebtn {
+                font-size: 40px;
+                top: 15px;
+                right: 35px;
+            }
+            }
+
+            #navToggle:hover {
+                color: cyan;
+                cursor: pointer;
+                }
+
     </style>
     
 </head>
-<!-- <body>
-    <h1>LINGYU ZHOU</h1>
-    <p>Instagram</p>
-    <p>Twitter</p>
-    <p>LinkedIn</p>
-</body> -->
-<body>
-  <h1><span id="demo"></span></span><span class="blinking">_</span></h1>
-    <button class="collapsible">Contact＋ </button>
+
+<!-- <header><a href="./index.html"> ⌂ </a><span id="demo"></span><span class="blinking">_</span></header> -->
+<header><div id="myNav" class="overlay">
+
+    <!-- Button to close the overlay navigation -->
+    <div style="text-align: center;"><a href="javascript:void(0)"  class="closebtn" onclick="closeNav()">︿</a></div>
+    
+  
+    <!-- Overlay content -->
+    <div class="overlay-content">    
+    <button class="collapsible">Contact ＋ </button>
     <div class="collapsible-content">
-      <itm><a href=mailto:admin@zhoulingyu.net>E-Mail</a></itm>
-      <br>
-      <itm><a href=https://www.linkedin.com/in/lingyuzhou>LinkedIn</a></itm>
-      <br>
-      <itm><a href=https://instagram.com/toqurdn>Instagram</a></itm>
-      <br>
-      <itm><a href=https://github.com/xolyn>Github</a></itm>
-      <br>
-      <itm><a href=https://twitter.com/uygniluohz>X</a></itm>
-      <br>
-      <itm><a href=https://weibo.com/u/5663761733>Weibo</a></itm>
+        <itm><a style="font-size: 5vmin;color: white;" href=mailto:admin@zhoulingyu.net>E-Mail</a></itm>
+
+        <itm><a style="font-size: 5vmin;color: white" href=https://www.linkedin.com/in/lingyuzhou>LinkedIn</a></itm>
+
+      <itm><a style="font-size: 5vmin;color: white" href=https://instagram.com/toqurdn>Instagram</a></itm>
+
+      <itm><a style="font-size: 5vmin;color: white" href=https://github.com/xolyn>Github</a></itm>
+
+      <itm><a style="font-size: 5vmin;color: white" href=https://twitter.com/uygniluohz>X</a></itm>
+
+      <itm><a style="font-size: 5vmin;color: white" href=https://weibo.com/u/5663761733>Weibo</a></itm>
       
     </div>
-    <br>
+
     <a style="color: white;" href=https://zhoulingyu.net/files/cv_lzhou.pdf><button>CV</button></a>
-    <br>
+
     <a style="color: white;" href=https://sites.google.com/view/prevcs/home><button>Portfolio</button></a>
-    
-    
-    
-    <!-- <p><a style="color: white;" href=https://zhoulingyu.net/files/cv_lzhou.pdf>CV</a></p>
+    </div>
+  
+  </div>
+  
+  <!-- Use any element to open/show the overlay navigation menu -->
+  <div style="text-align: center; padding-top: 1.5vh;"><span id="navToggle" onclick="openNav()">﹀</span></div>
+  
+</header>
 
-    <p><a style="color: white;" href=https://sites.google.com/view/prevcs/home>Portfolio</a></p> -->
-
+<body>
+  <h1 style="text-align: center;"><span id="demo"></span></span><span class="blinking">_</span></h1>
 
 
 <script>
-// JavaScript to toggle the collapsible content and button text
+/* Open */
+function openNav() {
+  document.getElementById("myNav").style.height = "100%";
+}
+
+/* Close */
+function closeNav() {
+  document.getElementById("myNav").style.height = "0%";
+}
+
 const collapsibleButtons = document.querySelectorAll(".collapsible");
 collapsibleButtons.forEach(button => {
   button.addEventListener("click", function() {
     const content = this.nextElementSibling;
     if (content.style.display === "block") {
       content.style.display = "none";
-      this.textContent = "Contact＋";
+      this.textContent = "Contact ＋";
     } else {
       content.style.display = "block";
-      this.textContent = "Contact－";
+      this.textContent = "Contact －";
     }
   });
 
@@ -151,8 +255,8 @@ collapsibleButtons.forEach(button => {
 
 /* Typer: */
 var i = 0;
-var txt = 'Lingyu  Zhou'; /* The text */
-var speed = 100; /* The speed/duration of the effect in milliseconds */
+var txt = 'LINGYU ZHOU'; /* The text */
+var speed = 50; /* The speed/duration of the effect in milliseconds */
 
 function typeWriter() {
   if (i < txt.length) {

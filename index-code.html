@@ -6,14 +6,11 @@
     <style>
         @font-face { font-family: neue; src: url("fonts/NeueHaasDisplayBold.ttf"); } 
         @font-face { font-family: made; src: url("fonts/MADE.otf"); } 
-        @font-face { font-family: code; src: url("fonts/SourceCodePro-Regular.otf"); } 
-        @font-face { font-family: hn; src: url("fonts/HelveticaNeue-HeavyExt.otf"); } 
-        
+        @font-face { font-family: code; src: url("fonts/CONSOLA.TTF"); } 
         
         ::selection {
-          /* color: orangered; */
-          background: transparent; 
-          color:grey;
+          /* color: blue;  */
+          background: blue; 
         }
 
         body {
@@ -29,17 +26,16 @@
             padding-top: 25vh;
             font-size: 15vmin;
             margin: 5vh 0;
-            /* font-family: hn; */
-            font-family: hn;
+            font-family: code;
             letter-spacing: -0.5px;
-            color:orangered;
+            color:white;
             font-stretch:wider;
         }
 
         p {
             font-size: 1em;
             margin: 2vh 0;
-            font-family: neue;
+            font-family: code;
             letter-spacing: -0.5px;
 
         }
@@ -47,7 +43,7 @@
         itm{
             font-size: 3vmin;
             margin: 2vh 0;
-            font-family: neue;
+            font-family: code;
             letter-spacing: -0.5px;
         }
 
@@ -55,10 +51,10 @@
             background-color: transparent;
             font-size: 5vmin;
             border: none;
-            font-family: neue;
+            font-family: code;
             color:white;
-            letter-spacing: -0.5px;
-            
+            letter-spacing: -1px;
+            cursor: pointer;
             
         }
 
@@ -71,9 +67,9 @@
         }
 
         footer{
-            font-size: 0.5rem;
+            font-size: 1.5vmin;
             margin: 2vh 0;
-            font-family: neue;
+            font-family: code;
             color:white;
             padding-top: 25vh;
             
@@ -103,15 +99,12 @@
     <p>LinkedIn</p>
 </body> -->
 <body>
-  <!-- here change suffix ↓↓↓↓↓↓↓↓↓↓↓ -->
-  <h1><span id="demo"></span></span><span class="blinking"></span></h1> 
-  <a style="color: white;" href=https://zhoulingyu.net/files/cv_lzhou.pdf><button>About</button></a>
-    <br>
-    <button class="collapsible">Contact ＋ </button>
+  <h1><span id="demo"></span></span><span class="blinking">_</span></h1>
+    <button class="collapsible">Contact＋ </button>
     <div class="collapsible-content">
-        <itm><a href=mailto:admin@zhoulingyu.net>E-Mail</a></itm>
+      <itm><a href=mailto:admin@zhoulingyu.net>E-Mail</a></itm>
       <br>
-        <itm><a href=https://www.linkedin.com/in/lingyuzhou>LinkedIn</a></itm>
+      <itm><a href=https://www.linkedin.com/in/lingyuzhou>LinkedIn</a></itm>
       <br>
       <itm><a href=https://instagram.com/toqurdn>Instagram</a></itm>
       <br>
@@ -143,10 +136,10 @@ collapsibleButtons.forEach(button => {
     const content = this.nextElementSibling;
     if (content.style.display === "block") {
       content.style.display = "none";
-      this.textContent = "Contact ＋";
+      this.textContent = "Contact＋";
     } else {
       content.style.display = "block";
-      this.textContent = "Contact －";
+      this.textContent = "Contact－";
     }
   });
 
@@ -158,7 +151,7 @@ collapsibleButtons.forEach(button => {
 
 /* Typer: */
 var i = 0;
-var txt = 'LINGYU ZHOU'; /* The text */
+var txt = 'Lingyu  Zhou'; /* The text */
 var speed = 100; /* The speed/duration of the effect in milliseconds */
 
 function typeWriter() {
