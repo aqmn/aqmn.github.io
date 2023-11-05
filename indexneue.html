@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<title>Lingyu Zhou</title>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        @font-face { font-family: neue; src: url("fonts/NeueHaasDisplayBold.ttf"); } 
+        @font-face { font-family: made; src: url("fonts/MADE.otf"); } 
+        @font-face { font-family: code; src: url("fonts/SourceCodePro-Regular.otf"); } 
+        @font-face { font-family: hn; src: url("fonts/HelveticaNeue-HeavyExt.otf"); } 
+        
+        
+        ::selection {
+          /* color: orangered; */
+          background: transparent; 
+          color:grey;
+        }
+
+        body {
+            /* background-color:rgb(39,93,43); */
+            background-color:black;
+            
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        h1 {
+            padding-top: 25vh;
+            font-size: 15vmin;
+            margin: 5vh 0;
+            /* font-family: hn; */
+            font-family: hn;
+            letter-spacing: -0.5px;
+            color:orangered;
+            font-stretch:wider;
+        }
+
+        p {
+            font-size: 1em;
+            margin: 2vh 0;
+            font-family: neue;
+            letter-spacing: -0.5px;
+
+        }
+
+        itm{
+            font-size: 3vmin;
+            margin: 2vh 0;
+            font-family: neue;
+            letter-spacing: -0.5px;
+        }
+
+        button{
+            background-color: transparent;
+            font-size: 5vmin;
+            border: none;
+            font-family: neue;
+            color:white;
+            letter-spacing: -0.5px;
+        }
+
+        .itm{
+          transition: color 0.3s;
+        }
+
+        .itm:hover{
+          color:orangered;
+        }
+
+        a{
+        /* color:rgb(107,230,209); */
+        color:cyan;
+        text-decoration: None;
+        }
+
+        a:hover{
+          color:orangered;
+        }
+
+        footer{
+            font-size: 0.5rem;
+            margin: 2vh 0;
+            font-family: neue;
+            color:white;
+            padding-top: 25vh;
+            
+        }
+
+        button:hover{
+          color:orangered;
+          cursor: pointer;
+        }
+
+        .blinking {
+          animation: blink 1s steps(1, end) infinite;
+        }
+
+        @keyframes blink {
+          0%, 100% {
+            opacity: 0;
+          }
+          50% {
+            opacity: 1;
+          }
+        }
+
+    </style>
+    
+</head>
+<!-- <body>
+    <h1>LINGYU ZHOU</h1>
+    <p>Instagram</p>
+    <p>Twitter</p>
+    <p>LinkedIn</p>
+</body> -->
+<body>
+  <!-- change suffix:   *</span></h1> -->
+  <h1><span id="demo"></span></span><span class="blinking">_</span></h1> 
+  <!-- <a style="color: white;" href=https://zhoulingyu.net/files/cv_lzhou.pdf><button>About</button></a> -->
+    <br>
+    <button class="collapsible">Contact ＋ </button>
+    <div class="collapsible-content">
+      <itm><a href=mailto:admin@zhoulingyu.net>E-Mail</a></itm>
+      <br>
+      <itm><a href=https://www.linkedin.com/in/lingyuzhou>LinkedIn</a></itm>
+      <br>
+      <itm><a href=https://instagram.com/toqurdn>Instagram</a></itm>
+      <br>
+      <itm><a href=https://github.com/xolyn>Github</a></itm>
+      <br>
+      <itm><a href=https://twitter.com/uygniluohz>X</a></itm>
+      <br>
+      <itm><a href=https://weibo.com/u/5663761733>Weibo</a></itm>
+      
+    </div>
+    <br>
+    <a style="color: white;" href=https://zhoulingyu.net/files/cv_lzhou.pdf><button>CV</button></a>
+    <br>
+    <a style="color: white;" href=https://sites.google.com/view/prevcs/home><button>Portfolio</button></a>
+    
+    
+    
+    <!-- <p><a style="color: white;" href=https://zhoulingyu.net/files/cv_lzhou.pdf>CV</a></p>
+
+    <p><a style="color: white;" href=https://sites.google.com/view/prevcs/home>Portfolio</a></p> -->
+
+
+
+<script>
+// JavaScript to toggle the collapsible content and button text
+const collapsibleButtons = document.querySelectorAll(".collapsible");
+collapsibleButtons.forEach(button => {
+  button.addEventListener("click", function() {
+    const content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+      this.textContent = "Contact ＋";
+    } else {
+      content.style.display = "block";
+      this.textContent = "Contact －";
+    }
+  });
+
+  // Initially hide the collapsible content
+  const content = button.nextElementSibling;
+  content.style.display = "none";
+});
+
+
+/* Typer: */
+var i = 0;
+var txt = 'LINGYU ZHOU'; /* The text */
+var speed = 100; /* The speed/duration of the effect in milliseconds */
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("demo").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+
+window.onload = function() {
+  typeWriter(); // Call the function when the page is loaded
+}
+</script>
+</body>
+<footer>Powered by Lingyu Zhou, under license to  <a href="https://khentmt.com">KH Entertainment</a> © (2012-2023) All rights reserved. </footer>
+</html>
