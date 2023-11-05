@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<title>Lingyu Zhou</title>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        @font-face { font-family: neue; src: url("fonts/NeueHaasDisplayBold.ttf"); } 
+        @font-face { font-family: made; src: url("fonts/MADE.otf"); } 
+        @font-face { font-family: code; src: url("fonts/SourceCodePro-Regular.otf"); } 
+        @font-face { font-family: hn; src: url("fonts/HelveticaNeue-HeavyExt.otf"); } 
+        
+        
+        ::selection {
+          /* color: orangered; */
+          background: transparent; 
+          color:grey;
+        }
+
+        body {
+            /* background-color:rgb(39,93,43); */
+            background-color:black;
+            font-size: 5vmin;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: left;
+        }
+
+        h1 {
+            padding-top: 25vh;
+            font-size: 15vmin;
+            margin: 5vh 0;
+            /* font-family: hn; */
+            font-family: hn;
+            letter-spacing: -0.5px;
+            color:orangered;
+            font-stretch:wider;
+        }
+
+        p {
+            font-size: 1em;
+            margin: 2vh 0;
+            font-family: neue;
+            letter-spacing: -0.5px;
+
+        }
+
+        a{
+        /* color:rgb(107,230,209); */
+        color:orangered;
+        text-decoration: None;
+        }
+
+        header{
+        font-size: 10vmin;
+        color:orangered;
+        font-family: neue;
+        text-align: left;
+        }
+
+        a:hover{
+            color: cyan;
+        }
+
+
+        footer{
+            font-size: 0.5rem;
+            margin: 2vh 0;
+            font-family: neue;
+            color:white;
+            padding-top: 25vh;
+            text-align: center;
+            
+        }
+
+
+        .blinking {
+          animation: blink 1s steps(1, end) infinite;
+        }
+
+        @keyframes blink {
+          0%, 100% {
+            opacity: 0;
+          }
+          50% {
+            opacity: 1;
+          }
+        }
+
+
+        /*-----------------nav bar----------------*/
+
+        /* The Overlay (background) */
+            .overlay {
+            /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+            height: 0%;
+            width: 100%;
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            background-color: rgb(0,0,0); /* Black fallback color */
+            background-color: rgba(0,0,0); /* Black w/opacity */
+            overflow-y: hidden; /* Disable horizontal scroll */
+            transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+            }
+
+            /* Position the content inside the overlay */
+            .overlay-content {
+            position: relative;
+            top: 25%; /* 25% from the top */
+            width: 100%; /* 100% width */
+            text-align: center; /* Centered text/links */
+            margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+            }
+
+            /* The navigation links inside the overlay */
+            .overlay a {
+            /* padding: 8px; */
+            text-decoration: none;
+            font-size: 10vmin;
+            color: orangered;
+            display: block; /* Display block instead of inline */
+            transition: 0.3s; /* Transition effects on hover (color) */
+            }
+
+            /* When you mouse over the navigation links, change their color */
+            .overlay a:hover, .overlay a:focus {
+            color: cyan;
+            }
+
+            /* Position the close button (top right corner) */
+            .overlay .closebtn {
+            /* position: absolute;
+            top: 20px;
+            right: 45px;
+            font-size: 60px; */
+            }
+
+            .downscroll a:hover{
+                color: cyan
+            }
+            /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+            @media screen and (max-height: 450px) {
+            .overlay a {font-size: 20px}
+            .overlay .closebtn {
+                font-size: 40px;
+                top: 15px;
+                right: 35px;
+            }
+            }
+
+            #navToggle:hover {
+                color: cyan;
+                cursor: pointer;
+                }
+
+    </style>
+    
+</head>
+
+<!-- <header><a href="./index.html"> ⌂ </a><span id="demo"></span><span class="blinking">_</span></header> -->
+<header><div id="myNav" class="overlay">
+
+    <!-- Button to close the overlay navigation -->
+    <div style="text-align: center;"><a href="javascript:void(0)"  class="closebtn" onclick="closeNav()">︿</a></div>
+    
+  
+    <!-- Overlay content -->
+    <div class="overlay-content">
+      <a href="#">Home</a>
+      <a href="#">Contact</a>
+      <a href="#">CV</a>
+      <a href="#">Portfolio</a>
+    </div>
+  
+  </div>
+  
+  <!-- Use any element to open/show the overlay navigation menu -->
+  <div style="text-align: center; "><span id="navToggle" onclick="openNav()">﹀</span></div>
+  
+</header>
+
+<body>
+    <p style="font-family: hn;font-size: 15vmin;color:#00baff;"><span id="demo"></span><span class="blinking">_</span><p>
+    <p>My name is Lingyu Zhou. I am the founder of <a href="https://khentmt.com">KH Entertainment</a>. 
+        I am also currently a graduate student at <a href="https://cornell.edu">Cornell University</a> studying applied statistics and data science. 
+        Before entering Cornell, I studied mathematics at 
+        <a href="https://wisc.edu">University of Wisconsin-Madison</a> for my bachelor's degree.
+        
+    </p>
+
+    <p>
+        My research directions are nonlinear system, applied mathematical modeling, and applied statistics.
+        My specialities are software engineering, math, data analysis, and data visualization.
+        I am also interested in biology, botany, and linguistics.  
+        If you are interested, see my previous previous work <a href="https://sites.google.com/view/prevcs/home">here</a>.
+    </p>
+
+    <p>
+        Previously I worked at the Technology Strategy Department in <a href="http://m.hoperun.com/news.html">Jiangsu Hoperun Software Co. Ltd.</a>, 
+        where my main work involves data analysis on Apache Flink platform and IoT complex events processing based on MQTT protocol. 
+        More information, including the source code about this program can be found <a href="https://github.com/xolyn/flinkmqtt">here</a>. Before joining Hoperun,
+        I was a environmental data analyst at <a href="https://www.sino-technology.com/">Shanghai Sino Environmental Technology Co., Ltd.</a>.
+    </p>
+
+
+<script>
+/* Open */
+function openNav() {
+  document.getElementById("myNav").style.height = "100%";
+}
+
+/* Close */
+function closeNav() {
+  document.getElementById("myNav").style.height = "0%";
+}
+
+
+
+
+/* Typer: */
+var i = 0;
+var txt = ' About'; /* The text */
+var speed = 50; /* The speed/duration of the effect in milliseconds */
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("demo").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+
+window.onload = function() {
+  typeWriter(); // Call the function when the page is loaded
+}
+</script>
+</body>
+<footer>Powered by Lingyu Zhou, under license to  <a href="https://khentmt.com">KH Entertainment</a> © (2012-2023) All rights reserved. </footer>
+</html>

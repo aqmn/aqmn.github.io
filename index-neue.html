@@ -7,10 +7,13 @@
         @font-face { font-family: neue; src: url("fonts/NeueHaasDisplayBold.ttf"); } 
         @font-face { font-family: made; src: url("fonts/MADE.otf"); } 
         @font-face { font-family: code; src: url("fonts/SourceCodePro-Regular.otf"); } 
+        @font-face { font-family: hn; src: url("fonts/HelveticaNeue-HeavyExt.otf"); } 
+        
         
         ::selection {
-          color: lightgreen; 
+          /* color: orangered; */
           background: transparent; 
+          color:grey;
         }
 
         body {
@@ -24,11 +27,12 @@
 
         h1 {
             padding-top: 25vh;
-            font-size: 3.5em;
+            font-size: 15vmin;
             margin: 5vh 0;
-            font-family: neue;
+            /* font-family: hn; */
+            font-family: hn;
             letter-spacing: -0.5px;
-            color:white;
+            color:orangered;
             font-stretch:wider;
         }
 
@@ -41,7 +45,7 @@
         }
 
         itm{
-            font-size: 1em;
+            font-size: 3vmin;
             margin: 2vh 0;
             font-family: neue;
             letter-spacing: -0.5px;
@@ -49,7 +53,7 @@
 
         button{
             background-color: transparent;
-            font-size: 1em;
+            font-size: 5vmin;
             border: none;
             font-family: neue;
             color:white;
@@ -99,7 +103,10 @@
     <p>LinkedIn</p>
 </body> -->
 <body>
+  
   <h1><span id="demo"></span></span><span class="blinking">_</span></h1>
+  <a style="color: white;" href=https://zhoulingyu.net/files/cv_lzhou.pdf><button>About</button></a>
+    <br>
     <button class="collapsible">Contact ＋ </button>
     <div class="collapsible-content">
         <itm><a href=mailto:admin@zhoulingyu.net>E-Mail</a></itm>
