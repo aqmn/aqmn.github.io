@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lingyu Zhou</title>
+    <style>
+
+        @font-face { font-family: neue; src: url("fonts/NeueHaasDisplayMediu.ttf"); } 
+        @font-face { font-family: made; src: url("fonts/MADE.otf"); } 
+        @font-face { font-family: code; src: url("fonts/SourceCodePro-Regular.otf"); } 
+        @font-face { font-family: hn; src: url("fonts/HelveticaNeue-HeavyExt.otf"); } 
+
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background-color: black;
+            color: white;
+            transition: background-color 0.5s, color 0.5s;
+            
+        }
+
+        .content {
+            position: absolute;
+            bottom: 5vw;
+            left: 1vw;
+            font-family: neue;
+        }
+        
+        .content a {
+            color:inherit;
+            transition: color 0.3s, border-bottom 0.3s; /* Add transition effects */
+        }
+
+        .content a:hover {
+            color:red;
+        }
+
+        #modeSwitch {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+
+        /* Bright Mode Styles */
+        body.bright-mode {
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+      <h1 style=" font-size: 10vmin;">Lingyu Zhou</h1>
+      <p>
+        <a style=" font-size: 5vmin;" href=https://zhoulingyu.net/files/cv_lzhou.pdf>CV<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/> </svg></a>
+      <br>
+      <a style=" font-size: 5vmin" href=https://sites.google.com/view/prevcs/home>Portfolio<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/> </svg></a>
+      <br>
+      <a style="font-size: 5vmin" href=https://blog.zhoulingyu.net>Blog<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/> </svg></a>
+      </p>
+    </div>
+
+    <div id="modeSwitch" onclick="toggleMode()">
+      ☀
+    </div>
+
+    <script>
+        function toggleMode() {
+            document.body.classList.toggle("bright-mode");
+        }
+    </script>
+</body>
+</html>
