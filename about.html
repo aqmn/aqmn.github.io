@@ -10,9 +10,12 @@
         @font-face { font-family: madethin; src: url("fonts/MADE Outer Sans Thin PERSONAL USE.otf"); } 
         @font-face { font-family: neue; src: url("fonts/NeueHaasDisplayMediu.ttf"); } 
         @font-face { font-family: urban; src: url("fonts/Urbanchrome Outline.ttf"); } 
+        @font-face { font-family: op; src: url("fonts/Chirp-Medium.ttf"); } 
+
         a{
-            color:silver;
-            text-decoration: none;
+            color:rgb(169, 169, 169);
+            /* text-decoration: none; */
+            
         }
 
         a:hover{
@@ -21,10 +24,12 @@
 
         
         body {
-            color:grey;
-            background-color: rgb(246,246,246);
+            color:black;
+            /* background-color: rgb(246,246,246); */
+            background-color: white;
             margin: 0;
             padding: 0;
+            /* padding-left: 5vw; */
             font-family: Arial, sans-serif;
 
         }
@@ -33,12 +38,12 @@
         .video-container {
             position: relative;
             width: 100vw;
-            height: 30vh;
+            height: 40vh;
             overflow: hidden;
         }
 
         video {
-            width: 100%;
+            width: 100vw;
             height: 100%;
             object-fit: cover;
         }
@@ -61,7 +66,9 @@
             padding-top: 1rem;
             /* padding: 2rem; */
             font-size: 1.5rem;
-            font-family: neue;
+            font-family: op;
+            letter-spacing: -1px;
+            
         }
 
         .main-content h2 {
@@ -72,10 +79,22 @@
 
         /*HERE TO CHANGE TEXT SIZE*/
         .main-content p {
-            margin-top: 2rem;
+            padding-left: 10vw;
+            padding-right: 10vw;
+            padding-top: 5vh;
+            /* margin-top: 1rem; */
             /* margin-right: 6rem; */
-            font-size: 2rem;
-            margin-top: 0.1rem; /* Adjust the value as needed */
+            font-size: 1.5rem;
+            /* transition: color 0.3s, border-bottom 0.3s; */
+        }
+
+        .main-content p a {
+            color:rgb(169, 169, 169);
+            transition: color 0.5s, border-bottom 0.3s;
+        }
+
+        .main-content p a:hover {
+            color:black
         }
 
         footer {
@@ -83,27 +102,20 @@
             padding-left: 5vw;
             padding-right: 5vw;
             font-family: neue;
+            padding-bottom: 1vh;
             font-size: 0.5rem;
             bottom: 5vh;
-            background-color:transparent; /* Transparent black background */
+            background-color:transparent; 
             text-align: center;
             color: grey; /* Text color */
             width: 90vw;
-            /* font-family: monument; */
-            /* font-family: 'Archivo Black', sans-serif;
-            font-family: 'Manrope', sans-serif; */
         }
-
-        p{
-
-            font-size: 1em;
-        }
-
     </style>
+
 </head>
 <body>
     <div class="video-container" id="video-container">
-        <a href="index.html"><video autoplay muted loop playsinline poster="video-poster.jpg">
+        <a style="width: 0vw;" href="index.html"><video autoplay muted loop playsinline>
             <source src="bgv.mp4" type="video/mp4">
             <!-- Add additional video formats here for better browser compatibility -->
         </video></a>
@@ -137,8 +149,9 @@
         </p>
 
         <p>
-            Why .NET instead of .COM?
-            <p>The pervasive misappropriation of the ".com" domain for personal websites represents a linguistic and conceptual misunderstanding, 
+            <b>> Why .NET instead of .COM?</b>
+            <br>
+            The pervasive misappropriation of the ".com" domain for personal websites represents a linguistic and conceptual misunderstanding, 
                 indicative of a lexical disregard for the commercial connotation inherent in this TLD. 
                 The ubiquitous adoption of ".com" for non-commercial pursuits betrays a departure from the etymological underpinnings of the abbreviation, 
                 where "com" ostensibly denotes commercial endeavors. This lexical laxity, wherein individuals traverse the semantic confines of the ".com" 
@@ -147,21 +160,10 @@
                 begets a linguistic paradox emblematic of the dynamic interplay between linguistic evolution and digital vernacular. 
                 Such lexical transgressions, seems subtle, illuminate the nuanced and evolving nature of language in the virtual epoch, 
                 where lexical boundaries are often porous and subject to the whims of cultural appropriation. I strongly condemn misbehavior of this kind. 
-                <s>Totally not because I didn't manage to snap up the .com website of my name.</s> </p>
+                <s>Totally not because I didn't manage to snap up the .com website of my name.</s> 
 
         </p>
-        <!-- <p> Previously I studied mathematics at 
-            <a href="https://wisc.edu">University of Wisconsin-Madison</a> for my bachelor's degree.
-            
-             If you are interested, see my previous previous work <a href="https://sites.google.com/view/prevcs/home">here</a>. </p>
-
-        <p>My specialities are software engineering, data analysis, and math.
-            I am also interested in linguistics, biostatistics, nonlinear system and applied mathematical modeling.</p> -->
-
-        <!-- <P>This website is composed by Lingyu Zhou based on HTML and CSS purely, hosted by <a href="https://www.aliyun.com/product/oss">Alibaba Cloud OSS</a>.</p>
-            
-        <p>All contents under this second level domain are licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a>.</p> -->
-        <!-- <p xmlns:cc="http://creativecommons.org/ns#" >All contents under this second level domain are licensed under <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-ND 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nd.svg?ref=chooser-v1"></a></p> -->
+        
         <p style="text-align: right;"><a href="#video-container">Back to top↑</a></p>
     </div>
     <footer>Powered by Lingyu Zhou, under license to  <a href="https://khentmt.com">KH Entertainment</a> © (2012-2023) All rights reserved. </footer>
