@@ -6,10 +6,16 @@
     <title>Lingyu Zhou</title>
     <style>
 
-        @font-face { font-family: neue; src: url("fonts/NeueHaasDisplayMediu.ttf"); } 
+        @font-face { font-family: neue; src: url("fonts/Chirp-Medium.ttf"); } 
         @font-face { font-family: made; src: url("fonts/MADE.otf"); } 
         @font-face { font-family: code; src: url("fonts/SourceCodePro-Regular.otf"); } 
         @font-face { font-family: hn; src: url("fonts/HelveticaNeue-HeavyExt.otf"); } 
+
+        ::selection {
+          /* color: orangered; */
+          background: transparent; 
+          color:blue;
+        }
 
         body {
             margin: 0;
@@ -19,6 +25,26 @@
             color: white;
             transition: background-color 0.5s, color 0.5s;
             
+        }
+
+        footer {
+            /* background-color: rgb(0, 0, 0); */
+            
+            /* color: white; */
+            /* padding: 10px; */
+            padding-bottom: 1vh;
+            font-family: neue;
+            font-size: 1.5vmin;
+            text-align: center;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            transition: background-color 0.5s, color 0.5s;
+        }
+
+        footer a{
+            color:inherit;
+
         }
 
         .content {
@@ -53,20 +79,22 @@
     </style>
 </head>
 <body>
-    <div class="content">
+    <div class="content" style="letter-spacing: -1.5px;">
       <p style="font-size: 10vmin;">Lingyu Zhou</p>
       <p>
-        <a style="font-size: 5vmin" href=#>Contact<svg xmlns="http://www.w3.org/2000/svg" width="4vmin" height="4vmin" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/> </svg></a>
+        <a style="font-size: 5vmin" href=#>Contact</a>
         <br>
-        <a style="font-size: 5vmin" href=https://zhoulingyu.net/about.html>About<svg xmlns="http://www.w3.org/2000/svg" width="4vmin" height="4vmin" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/> </svg></a>
+        <a style="font-size: 5vmin" href=https://zhoulingyu.net/about.html>About</a>
         <br>
         <a style=" font-size: 5vmin;" href=https://zhoulingyu.net/files/cv_lzhou.pdf>CV<svg xmlns="http://www.w3.org/2000/svg" width="4vmin" height="4vmin" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/> </svg></a>
+      
+        <br>
+        <a style="font-size: 5vmin" href=https://blog.zhoulingyu.net>Blog<svg xmlns="http://www.w3.org/2000/svg" width="4vmin" height="4vmin" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/> </svg></a>
       <br>
       <a style=" font-size: 5vmin" href=https://sites.google.com/view/prevcs/home>Portfolio<svg xmlns="http://www.w3.org/2000/svg" width="4vmin" height="4vmin" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/> </svg></a>
       <br>
-      <a style="font-size: 5vmin" href=https://blog.zhoulingyu.net>Blog<svg xmlns="http://www.w3.org/2000/svg" width="4vmin" height="4vmin" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/> </svg></a>
-      <br>
-      <a style="font-size: 5vmin" href=https://zhoulingyu.net/faq.html>FAQ<svg xmlns="http://www.w3.org/2000/svg" width="4vmin" height="4vmin" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/> </svg></a>
+      
+      <a style="font-size: 5vmin" href=https://zhoulingyu.net/faq.html>FAQ</a>
       </p>
     </div>
 
@@ -74,11 +102,15 @@
     ☀︎ &#xFE0E;
       <!-- <img src="./switch.png" width="20vmin" style="filter: invert();"> -->
     </div>
+    <footer style="letter-spacing: -0.5px;"><p>Powered by Lingyu Zhou, under license to  <a href="https://khentmt.com">KH Entertainment 
+        <!-- <svg xmlns="http://www.w3.org/2000/svg" width="1.2vmin" height="1.2vmin" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/> </svg>  -->
+    </a> © (2012-2023) All rights reserved.</p> </footer>
 
     <script>
         function toggleMode() {
             document.body.classList.toggle("bright-mode");
         }
     </script>
+
 </body>
 </html>
