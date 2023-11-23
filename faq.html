@@ -10,6 +10,8 @@
         @font-face { font-family: madethin; src: url("fonts/MADE Outer Sans Thin PERSONAL USE.otf"); } 
         @font-face { font-family: neue; src: url("fonts/NeueHaasDisplayMediu.ttf"); } 
         @font-face { font-family: urban; src: url("fonts/Urbanchrome Outline.ttf"); } 
+        @font-face { font-family: op; src: url("fonts/Chirp-Medium.ttf"); } 
+        @font-face { font-family: opb; src: url("fonts/Chirp Bold.otf"); } 
         a{
             color:silver;
             text-decoration: none;
@@ -21,8 +23,8 @@
 
         
         body {
-            color:grey;
-            background-color: rgb(246,246,246);
+            color:black;
+            background-color: white;
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
@@ -57,10 +59,11 @@
         .main-content {
             padding-left: 1vw;
             padding-right: 2vw;
-            padding-top: 1rem;
+            padding-top: 2rem;
             /* padding: 2rem; */
             font-size: 1.5rem;
-            font-family: neue;
+            font-family: op;
+            letter-spacing: -1px;
         }
 
         .main-content h2 {
@@ -70,10 +73,19 @@
         }
 
         .main-content p {
-            margin-top: 2rem;
-            /* margin-right: 6rem; */
-            font-size: 2rem;
-            margin-top: 0.1rem; /* Adjust the value as needed */
+            padding-left: 10vw;
+            padding-right: 10vw;
+            font-size: 1.5rem;
+        }
+
+        .main-content p a {
+            text-decoration: underline ;
+            color:rgb(169, 169, 169);
+            transition: color 0.5s, border-bottom 0.3s;
+        }
+
+        .main-content p a:hover {
+            color:black
         }
 
         footer {
@@ -115,7 +127,8 @@
         }
 
         ask{
-            color:black
+            color:black;
+            font-family: opb;
         }
 
     </style>
@@ -137,7 +150,7 @@
         
 
         <!-- <div style="background-color: black; border-radius: 6px;"> 
-            <codeh >$ What is the licensing agreement and sharing rules for this website?
+            <codeh >> What is the licensing agreement and sharing rules for this website?
             </codeh>
             <br>
             <code>
@@ -146,7 +159,7 @@
         </div> -->
 
         <p >
-        <ask>$ What is the licensing agreement and sharing rules for this website?</ask>
+        <ask>> What is the licensing agreement and sharing rules for this website?</ask>
         <br>
             You can share by copying and redistributing the content under this second level domain in any medium or format with appropriate credit given.
             No commercial uses and derivatives of any kind are allowed.
@@ -156,20 +169,20 @@
         
         
         <p>
-        <ask>$ Does this website collect HTTP cookies?</ask>
+        <ask>> Does this website collect HTTP cookies?</ask>
         <br>
         This website does not use or collect any cookies. Nor does it track or store any information related to your browsing behavior or preferences.
         </p>
 
         <p>
-            <ask>$ How is this website made?</ask>
+            <ask>> How is this website made?</ask>
             <br>
             This fully responsive website is built based on HTML, CSS, JavaScript and partially Bootstrap by Lingyu Zhou, hosted by <a href="https://www.aliyun.com/product/oss">Alibaba Cloud OSS</a>. 
             Ackownledgement to <a href="https:openai.com">OpenAI</a>. Fonts used are Neue Haas Display, Monument Extended, and Urban Chrome Outline.
         </p>
 
         <p>
-            <ask>$ How to use this website?</ask>
+            <ask>> How to use this website?</ask>
             <br>
             Except for the home page: grey texts are hyperlinks that redicts you to an external page;
             No matter where you at, you can always go back to the homepage by clicking the banner video header;
@@ -179,7 +192,7 @@
             <a href="https://en.wikipedia.org/wiki/PageRank">Page Rank</a>, which is an algorithm Google creates to prioritize the searching result in its searching engine.    
         </p>
 
-        <p><ask>$ What if I found a problem or glitch in the website?</ask>
+        <p><ask>> What if I found a problem or glitch in the website?</ask>
             <br>
             Feel free to report problems of any kind, especially styling or device adapting problem to <a href="mailto:admin@zlybox.com">administrator</a>. Thank you for making effort to improve the website.  
         </p>
