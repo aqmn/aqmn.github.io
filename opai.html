@@ -122,8 +122,9 @@
       <br>
       <a style=" font-size: 5vmin" href=https://sites.google.com/view/prevcs/home>Portfolio<svg xmlns="http://www.w3.org/2000/svg" width="4vmin" height="4vmin" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/> </svg></a>
       <br>
-      
       <a style="font-size: 5vmin" href=https://zhoulingyu.net/faq.html>FAQ</a>
+      <br>
+      <a style="font-size: 5vmin" href="#" id="shareButton">Share<svg xmlns="http://www.w3.org/2000/svg" width="4vmin" height="4vmin" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/> </svg></a>
       </p>
     </div>
 
@@ -138,6 +139,25 @@
     <script>
         function toggleMode() {
             document.body.classList.toggle("bright-mode");
+        }
+
+        // Check if the Web Share API is supported by the browser
+        if (navigator.share) {
+        // Add a click event listener to the share button
+        document.getElementById('shareButton').addEventListener('click', () => {
+            // Use the share method to trigger the system's sharing menu
+            navigator.share({
+            title: 'Lingyu Zhou',
+            text: 'Personal Website',
+            url: 'https://zhoulingyu.net'
+            })
+            .then(() => console.log('Successful share'))
+            .catch((error) => console.log('Error sharing:', error));
+        });
+        } else {
+        // If the Web Share API is not supported, provide a fallback or inform the user
+        document.getElementById('shareButton').style.display = 'none';
+        console.log('Ehh, web share API not supported, get something new!');
         }
     </script>
 
