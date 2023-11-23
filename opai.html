@@ -29,10 +29,10 @@
 
         footer {
             /* background-color: rgb(0, 0, 0); */
-            
             /* color: white; */
             /* padding: 10px; */
             padding-bottom: 1px;
+            margin-top: 5vh;
             font-family: neue;
             font-size: 2vmin;
             text-align: center;
@@ -48,11 +48,13 @@
         }
 
         .content {
+            padding-left: 1vw;
             position: absolute;
             bottom: 5vw;
             left: 1vw;
             font-family: neue;
             transition: color 0.3s, border-bottom 0.3s;
+            padding-bottom: 2vh;
         }
         
         .content a {
@@ -76,25 +78,42 @@
             color: black;
         }
 
+        .collapsible-content {
+            display: none;
+            overflow: hidden;
+        }
+
+    /* Style for the collapsible link */
+        .collapsible-link {
+        cursor: pointer;
+        color: blue;
+        display: block;
+        overflow: hidden;
+        }
+
         /* details > summary {
-            list-style-type: 'Contact＋';
+            list-style-type: '';
         }
 
         details[open] > summary {
-            list-style-type: 'Contact－';
+            list-style-type: '';
         } */
 
+        details > summary {
+        list-style: none;
+        }
+        details > summary::-webkit-details-marker {
+        display: none;
+        }
     </style>
 </head>
 <body>
     <div class="content" style="letter-spacing: -1.5px;">
       <p style="font-size: 10vmin;">Lingyu Zhou</p>
-      <p>
-        <!-- <a style="font-size: 5vmin" href=#>Contact</a>
-        <br> -->
-        <details style="font-size: 5vmin">
-            <summary><u>Contact</u></summary>
-            
+
+        <!-- <details style="font-size: 5vmin">
+            <u>Contact</u><summary>+</summary>
+            <br>
             <a style="font-size: 4vmin" href=mailto:admin@zhoulingyu.net>E-Mail</a>
             <br>
             <a style="font-size: 4vmin" href=https://www.linkedin.com/in/lingyuzhou>LinkedIn</a>
@@ -106,12 +125,29 @@
             <a style="font-size: 4vmin" href=https://twitter.com/uygniluohz>X</a>
             <br>
             <a style="font-size: 4vmin" href=https://weibo.com/u/5663761733>Weibo</a>
-            
-        </details>
+        </details> -->
+
+        <!-- <a style="font-size: 5vmin" class="collapsible-link" onclick="toggleCollapsible()"><u>Contact</u>＋</a> -->
+        <a  class="collapsible-link" onclick="toggleCollapsible()">
+            <span style="font-size: 5vmin" id="linkText"><u>Contact</u></span> <span style="font-size: 5vmin" id="linkSymbol">＋</span>
+          </a>
+        
+        <div class="collapsible-content" id="collapsibleContent">
+            <a style="font-size: 3vmin" href=mailto:admin@zhoulingyu.net>E-Mail</a>
+            <br>
+            <a style="font-size: 3vmin" href=https://www.linkedin.com/in/lingyuzhou>LinkedIn</a>
+            <br>
+            <a style="font-size: 3vmin" href=https://instagram.com/toqurdn>Instagram</a>
+            <br>
+            <a style="font-size: 3vmin" href=https://github.com/xolyn>Github</a>   
+            <br>
+            <a style="font-size: 3vmin" href=https://twitter.com/uygniluohz>X</a>
+            <br>
+            <a style="font-size: 3vmin" href=https://weibo.com/u/5663761733>Weibo</a>
+          </div>
         <a style="font-size: 5vmin" href=https://zhoulingyu.net/about.html>About</a>
         <br>
         <a style=" font-size: 5vmin;" href=https://zhoulingyu.net/files/cv_lzhou.pdf>CV<svg xmlns="http://www.w3.org/2000/svg" width="4vmin" height="4vmin" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/> </svg></a>
-      
         <br>
         <a style="font-size: 5vmin" href=https://blog.zhoulingyu.net>Blog<svg xmlns="http://www.w3.org/2000/svg" width="4vmin" height="4vmin" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/> </svg></a>
       <br>
@@ -120,7 +156,7 @@
       <a style="font-size: 5vmin" href=https://zhoulingyu.net/faq.html>FAQ</a>
       <br>
       <a style="font-size: 5vmin" href="#" id="shareButton">Share<svg xmlns="http://www.w3.org/2000/svg" width="4vmin" height="4vmin" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/> </svg></a>
-      </p>
+
     </div>
 
     <div id="modeSwitch" onclick="toggleMode()" style="font-size: 7vmin;">
@@ -154,6 +190,36 @@
         document.getElementById('shareButton').style.display = 'none';
         console.log('Ehh, web share API not supported, get something new!');
         }
+
+        // function toggleCollapsible() {
+        //     var content = document.getElementById('collapsibleContent');
+        //     var link = document.querySelector('.collapsible-link');
+
+        //     if (content.style.display === 'none' || content.style.display === '') {
+        //         content.style.display = 'block';
+        //         link.textContent = 'Contact－';
+        //     } else {
+        //         content.style.display = 'none';
+        //         link.textContent = 'Contact＋';
+        //     }
+        //     }
+
+        function toggleCollapsible() {
+            var content = document.getElementById('collapsibleContent');
+            var linkText = document.getElementById('linkText');
+            var linkSymbol = document.getElementById('linkSymbol');
+
+            if (content.style.display === 'none' || content.style.display === '') {
+                content.style.display = 'block';
+                // link.textContent = 'Contact－';
+                linkSymbol.textContent = '－';
+            } else {
+                content.style.display = 'none';
+                // link.textContent = 'Contact＋';
+                linkSymbol.textContent = '＋';
+            }
+            }
+
     </script>
 
 </body>
