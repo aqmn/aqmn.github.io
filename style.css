@@ -204,12 +204,18 @@ ul {
           transition: 0.1s; }
 
 .floating-icon-container {
-position: fixed;
-bottom: 20px; /* Adjust the top position */
-right: 20px; /* Adjust the right position */
-background-color: white;
-border-radius: 50%;
-padding: 10px;
-box-shadow: 0 0 100px rgba(0, 0, 0, 0.5);
-z-index: 1000; /* Ensure it appears on top of other elements */
-}
+    /* width: 4vmin; 
+    height: 4vmin;  */
+    background-color: transparent;
+    position: fixed;
+    bottom: 20px; /* Adjust the top position */
+    right: 20px; /* Adjust the right position */
+    /* background-color: cyan; */
+    border-radius: 9999px;
+    /* padding: 10px; */
+    /* box-shadow: 0 0 100px rgba(0, 0, 0, 0.5); */
+    z-index: 1000; /* Ensure it appears on top of other elements */
+    /* text-align: center; */
+    /* display: inline-block; */
+    }
+
