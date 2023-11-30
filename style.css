@@ -3,6 +3,7 @@
 @font-face { font-family: urban; src: url("fonts/Urbanchrome Outline.ttf"); } 
 @font-face { font-family: made; src: url("fonts/MADE.otf"); } 
 @font-face { font-family: neue; src: url("fonts/NeueHaasDisplayMediu.ttf"); } 
+@font-face { font-family: op; src: url("fonts/Chirp-Medium.ttf"); } 
 
 /* @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300&display=swap'); */
 /* @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Manrope:wght@600&display=swap'); */
@@ -219,3 +220,39 @@ ul {
     /* display: inline-block; */
     }
 
+    .alert {
+        padding: 20px;
+        background-color: red; /* Red */
+        color: white;
+        /* margin-bottom: 15px; */
+        /* border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px; */
+       font-family: op;
+      }
+      
+      /* The close button */
+      .closebtn {
+        margin-left: 15px;
+        color: white;
+        font-weight: bold;
+        float: right;
+        font-size: 22px;
+        line-height: 20px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+      
+      /* When moving the mouse over the close button */
+      .closebtn:hover {
+        color: black;
+      }
+
+      .notification {
+        padding: 20px;
+        background-color: white; /* Red */
+        color: black;
+        /* margin-bottom: 15px; */
+        /* border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px; */
+       font-family: op;
+      }
