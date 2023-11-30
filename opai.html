@@ -66,7 +66,7 @@
             left: 1vw;
             font-family: neue;
             transition: color 0.3s, border-bottom 0.3s;
-            padding-bottom: 4vh;
+            padding-bottom: 3vh;
             overflow: hidden;
         }
 
@@ -161,8 +161,8 @@
             <a style="font-size: 1rem" href=https://weibo.com/u/5663761733>Weibo<svg xmlns="http://www.w3.org/2000/svg" width="0.8rem" height="0.8rem" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/> </svg></a>
         </div>
 
-        <a style="font-size: 1.5rem" href=https://zhoulingyu.net/about.html>About<svg xmlns="http://www.w3.org/2000/svg" width="1.2rem" height="1.2rem" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/> </svg></a>
-        <br>
+        <a style="font-size: 1.5rem" href=https://zhoulingyu.net/about.html>About</a>
+        <br style="margin-bottom: 10vh;">
         <a style=" font-size: 1.5rem;" href=https://zhoulingyu.net/files/cv_lzhou.pdf>CV<svg xmlns="http://www.w3.org/2000/svg" width="1.2rem" height="1.2rem" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/> </svg></a>
         <br>
         <a style="font-size: 1.5rem" href=https://blog.zhoulingyu.net>Blog<svg xmlns="http://www.w3.org/2000/svg" width="1.2rem" height="1.2rem" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/> </svg></a>
@@ -188,13 +188,9 @@
         document.body.classList.toggle("bright-mode");
     }
 
-    function share() {
-            
-        // Check if the Web Share API is supported by the browser
         if (navigator.share) {
-        // Add a click event listener to the share button
         document.getElementById('shareButton').addEventListener('click', () => {
-            // Use the share method to trigger the system's sharing menu
+
             navigator.share({
             title: 'Lingyu Zhou',
             text: 'Personal Website',
@@ -204,11 +200,10 @@
             .catch((error) => console.log('Error sharing:', error));
         });
         } else {
-        // If the Web Share API is not supported, provide a fallback or inform the user
         document.getElementById('shareButton').style.display = 'none';
-        console.log('Ehh, web share API not supported, get something new!');
-        }
-    }
+        console.log('Ehh, web share API not supported, get something new!');}
+
+
         // function toggleCollapsible() {
         //     var content = document.getElementById('collapsibleContent');
         //     var link = document.querySelector('.collapsible-link');
