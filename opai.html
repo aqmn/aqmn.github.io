@@ -184,8 +184,11 @@
     </a> © (2012-2023) All rights reserved.</p> </footer>
 
     <script>
+    function toggleMode() {
+        document.body.classList.toggle("bright-mode");
+    }
 
-function share() {
+    function share() {
             
         // Check if the Web Share API is supported by the browser
         if (navigator.share) {
