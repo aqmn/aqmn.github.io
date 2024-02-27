@@ -1,102 +1,75 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="path/to/seo-logo.png" type="image/png">
-    <title>About</title>
-    <style>
-        
-        @font-face { font-family: madethin; src: url("fonts/MADE Outer Sans Thin PERSONAL USE.otf"); } 
-        @font-face { font-family: neue; src: url("fonts/NeueHaasDisplayMediu.ttf"); } 
-        @font-face { font-family: urban; src: url("fonts/Urbanchrome Outline.ttf"); } 
-        a{
-            /* color:silver; */
-            color:inherit;
-            text-decoration:none;
-            /* underline dashed */
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coming Soon</title>
+  <style>
+    @font-face { font-family: monument; src: url("fonts/MonumentExtended-Regular.otf"); } 
+@font-face { font-family: urban; src: url("fonts/Urbanchrome Outline.ttf"); } 
+@font-face { font-family: hneue; src: url("fonts/HelveticaNeue-HeavyExt.otf"); } 
+@font-face { font-family: op; src: url("fonts/Chirp-Medium.ttf"); } 
+@font-face { font-family: neue; src: url("fonts/NeueHaasDisplayMediu.ttf"); } 
+    /* Set the video as a background */
+    video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+    /* Center the text and button */
+    .centered {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      z-index: 1;
+    }
+    h1 {
+      color: white;
+      /* font-size: 3vh; */
+      margin:2vh;
+      width: -moz-fit-content;
+  width: fit-content;
 
-        a:hover{
-            color:rgb(151,32,33)
-        }
+  display: table;
+      
+    }
 
-        
-        body {
-            color:grey;
-            background-color: rgb(246,246,246);
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-        }
-
-        /* Video background container */
-        .video-container {
-            position: relative;
-            width: 100vw;
-            height: 30vh;
-            overflow: hidden;
-        }
-
-        video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        /* Overlay text */
-        .overlay-text {
-            position: absolute;
-            top: 50%;
-            left: 8vw;
-            transform: translateY(-50%);
-            text-align: center;
-            color: #fff;
-            font-size: 1rem;
-        }
-
-        /* Main content */
-        .main-content {
-            padding-left: 2vw;
-            padding-right: 2vw;
-            padding-top: 1rem;
-            /* padding: 2rem; */
-            font-size: 1.5rem;
-            font-family: neue;
-        }
-
-        .main-content h2 {
-            font-size: 4rem;
-            margin-top: 1rem;
-            margin-bottom: 0.1rem; /* Adjust the value as needed */
-        }
-
-        .main-content p {
-            margin-top: 2rem;
-            /* margin-right: 6rem; */
-            font-size: 2rem;
-            margin-top: 0.1rem; /* Adjust the value as needed */
-        }
-
-        footer {
-            padding-top: 10vh;
-            padding-left: 5vw;
-            padding-right: 5vw;
-            font-family: neue;
-            font-size: 0.5rem;
-            bottom: 5vh;
-            background-color:transparent; /* Transparent black background */
-            text-align: center;
-            color: grey; /* Text color */
-            width: 90vw;
-            /* font-family: monument; */
-            /* font-family: 'Archivo Black', sans-serif;
-            font-family: 'Manrope', sans-serif; */
-        }
-
-    </style>
+    button {
+    background-color: transparent; /* Set background color to transparent */
+    border: 3px solid white; /* Set border to thick black frame */
+    color: white; /* Set text color to black */
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    /* margin: 4px 2px; */
+    cursor: pointer;
+    border-radius: 30px; /* Set border radius to make the button capsule-like */
+    font-family: op;
+}
+  </style>
 </head>
+<body>
+  <!-- Video background -->
+  <video autoplay loop muted>
+    <source src="tunnel.mp4" type="video/mp4">
+    <!-- Fallback for browsers that do not support video -->
+    Your browser does not support the video tag.
+  </video>
 
-<body style="background-color: rgb(248,246,241); padding-left: 0vw; padding-top: 5vh; padding-right: 10px; max-width: 90vw;">
-<p style="color: rgb(151,32,33);font-family: neue; font-size: 5rem;">This page is still under construct...</p>
-<br>
-<p style="color: grey;font-family: neue; font-size: 5rem;"><a href="index.html">> Home</a></p>
+  <!-- Centered text and button -->
+  <div class="centered">
+    <h1 style="font-family: op; font-size: 3.5rem;">Coming Soon...</h1>
+    <button onclick="history.back()">〈 Go Back</button>
+  </div>
 </body>
+</html>
+
