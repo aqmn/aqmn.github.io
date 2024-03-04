@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Language Greetings</title>
+<style>
+        @font-face { font-family: madethin; src: url("fonts/MADE Outer Sans Thin PERSONAL USE.otf"); } 
+        @font-face { font-family: neue; src: url("fonts/NeueHaasDisplayMediu.ttf"); } 
+        @font-face { font-family: urban; src: url("fonts/Urbanchrome Outline.ttf"); } 
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-size: 2em;
+  }
+
+  /* 添加动画效果 */
+  @keyframes fadeInOut {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+
+  #greeting {
+    animation: fadeInOut 4s infinite; /* 持续时间为 4 秒，无限循环 */
+  }
+</style>
+</head>
+<body>
+  <div style="font-family: neue;font-size: 7rem;" id="greeting"></div>
+
+<script>
+  // 定义要显示的不同国家语言的 "你好"
+  const greetings = ['Hello', '你好', 'Bonjour', 'Hola', 'Ciao', 'Привет', 'こんにちは','Hallo','สวัสดี','안녕하세요','Olá','مرحبًا','नमस्ते'];
+
+  // 获取显示 "你好" 的元素
+  const greetingElement = document.getElementById('greeting');
+
+  let index = 0;
+
+  // 定义一个函数来更新显示的 "你好"
+  function updateGreeting() {
+    greetingElement.textContent = greetings[index];
+    index = (index + 1) % greetings.length; // 循环遍历 greetings 数组
+  }
+
+  // 初始显示 "你好"
+  updateGreeting();
+
+  // 每隔一定时间更新一次显示的 "你好"
+  setInterval(updateGreeting, 4000); // 4000 毫秒（4 秒）为间隔
+</script>
+</body>
+</html>
+
+
