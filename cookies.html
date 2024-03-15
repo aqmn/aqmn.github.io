@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cookie Collector</title>
+</head>
+<body>
+<h1>Cookie Collector</h1>
+<p>Click the button below to collect and display cookies:</p>
+<button onclick="collectAndDisplayCookies()">Collect Cookies</button>
+<p id="cookieData"></p>
+
+<script>
+function collectAndDisplayCookies() {
+  // Get all cookies
+  var cookies = document.cookie.split(';');
+
+  // Display each cookie
+  var cookieDataElement = document.getElementById('cookieData');
+  cookieDataElement.innerHTML = '<strong>Collected Cookies:</strong><br>';
+  for (var i = 0; i < cookies.length; i++) {
+    cookieDataElement.innerHTML += cookies[i] + '<br>';
+  }
+}
+</script>
+</body>
+</html>
