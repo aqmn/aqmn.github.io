@@ -1,91 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Terminal-like Website</title>
-<style>
-  body {
-    font-family: monospace;
-    background-color: black;
-    color: white;
-    margin: 0;
-    padding: 0;
-  }
-  #terminal {
-    /* position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); */
-    text-align: left;
-    padding-left:1vh
-  }
-  #text {
-    display: inline-block;
-  }
-  #underscore {
-    display: inline-block;
-    animation: blink 1s steps(1, end) infinite;
-  }
-
-  @keyframes blink {
-          0%, 100% {
-            opacity: 0;
-          }
-          50% {
-            opacity: 1;
-          }
-        }
-  /* @keyframes blink {
-    50% {
-      opacity: 0;
-    }
-  } */
-  a{
-    color:inherit
-  }
-
-  @keyframes typing {
-  from { width: 0; }
-  to { width: 100%; }
-}
-
-.hidden {
-  display: none;
-}
-
-#output {
-  overflow: hidden;
-  white-space: nowrap;
-  animation: typing 3s steps(50, end);
-}
-
-</style>
-</head>
-<body>
-<div id="terminal">
-  <span id="text">
-    <pre>
+<!-- saved from url=(0020)https://fkcodes.com/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="./FK Codes _ Terminal_files/js"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
     
-   __   _                       ____  __            
-  / /  (_)__  ___ ___ ____ __  /_  / / /  ___  __ __
- / /__/ / _ \/ _ `/ // / // /   / /_/ _ \/ _ \/ // /
-/____/_/_//_/\_, /\_, /\_,_/   /___/_//_/\___/\_,_/ 
-            /___//___/                              
+      gtag('config', 'G-QJ9TR5T9S2');
+    </script>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lingyu Zhou CLI</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="./FK Codes _ Terminal_files/style.css">
+    <link rel="icon" type="image/x-icon" href="FK Codes _ Terminal_files/icon.png">
+  </head>
+  <body data-new-gr-c-s-check-loaded="14.1162.0" data-gr-ext-installed="" data-new-gr-c-s-loaded="14.1162.0">
+    <div id="terminal">
+      <p class=""><span class="index">
 
-    </pre>
-  </span>
-  <br>
-  > <a href="#" id="link">About</a>   <span id="underscore">_</span>
-<p id="output" class="hidden">
-    > Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe qui nesciunt unde rem sed ut perspiciatis rerum provident nobis error dolore veritatis, explicabo voluptatibus soluta, quam ab laudantium. Rerum, repellat! </p>
-</div>
-</body>
-</html>
-<script>
-    document.getElementById("link").addEventListener("click", function() {
-  var output = document.getElementById("output");
-  output.classList.remove("hidden");
-});
+      </span></p>
+      <pre>
+   __ _                           ______                 
+  / /(_)_ __   __ _ _   _ _   _  / _  / |__   ___  _   _ 
+ / / | | '_ \ / _` | | | | | | | \// /| '_ \ / _ \| | | |
+/ /__| | | | | (_| | |_| | |_| |  / //\ | | | (_) | |_| |
+\____/_|_| |_|\__, |\__, |\__,_| /____/_| |_|\___/ \__,_|
+              |___/ |___/                 (C) Lingyu Zhou             
+      </pre>
+       <p class=""><span class="color2">Welcome to my CLI website.</span></p><p class="">       <p class=""><span class="color2">If input can't be made, please refresh the page.</span><br><span class="color2">For a list of available commands, type</span> <span class="command">'help'</span><span class="color2">.</span></p><a id="before"></a>
 
-</script>
+    </div>
+    <div id="command" onclick="$(&#39;texter&#39;).focus();">
+      <textarea type="text" id="texter" onkeyup="typeIt(this, event)" onkeydown="typeIt(this, event); 
+                   moveIt(this.value.length, event)" onkeypress="typeIt(this, event);" autofocus=""></textarea>
+      <div id="liner">
+        <span id="typer"></span><b class="cursor" id="cursor" style="left: 0px;">█</b>
+      </div>
+    </div>
+    <script src="./FK Codes _ Terminal_files/caret.js"></script>
+    <script src="./FK Codes _ Terminal_files/commands.js"></script>
+    <script src="./FK Codes _ Terminal_files/main.js"></script>
+  
+
+</body></html>

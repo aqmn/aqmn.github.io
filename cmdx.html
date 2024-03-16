@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terminal-like Website</title>
+<style>
+  body {
+    font-family: monospace;
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+  }
+  #terminal {
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    text-align: left;
+    padding-left:1vh
+  }
+  #text {
+    display: inline-block;
+  }
+  #underscore {
+    display: inline-block;
+    animation: blink 1s steps(1, end) infinite;
+  }
+
+  @keyframes blink {
+          0%, 100% {
+            opacity: 0;
+          }
+          50% {
+            opacity: 1;
+          }
+        }
+  /* @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  } */
+  a{
+    color:inherit
+  }
+
+  @keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+.hidden {
+  display: none;
+}
+
+#output {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(50, end);
+}
+
+</style>
+</head>
+<body>
+<div id="terminal">
+  <span id="text">
+    <pre>
+    
+   __   _                       ____  __            
+  / /  (_)__  ___ ___ ____ __  /_  / / /  ___  __ __
+ / /__/ / _ \/ _ `/ // / // /   / /_/ _ \/ _ \/ // /
+/____/_/_//_/\_, /\_, /\_,_/   /___/_//_/\___/\_,_/ 
+            /___//___/                              
+
+    </pre>
+  </span>
+  <br>
+  > <a href="#" id="link">About</a>   <span id="underscore">_</span>
+<p id="output" class="hidden">
+    > Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe qui nesciunt unde rem sed ut perspiciatis rerum provident nobis error dolore veritatis, explicabo voluptatibus soluta, quam ab laudantium. Rerum, repellat! </p>
+</div>
+</body>
+</html>
+<script>
+    document.getElementById("link").addEventListener("click", function() {
+  var output = document.getElementById("output");
+  output.classList.remove("hidden");
+});
+
+</script>
