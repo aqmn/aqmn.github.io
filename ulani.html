@@ -1,0 +1,44 @@
+
+
+<style>
+a {
+    position: relative; 
+    color: grey;
+    transition: color 1s; 
+    text-decoration: none; 
+}
+
+a::after {
+    content: '';
+    position: absolute;
+    width: 0; /* Start with no underline */
+    height: 2px; /* Thickness of the underline */
+    bottom: 0; /* Position at the bottom of the text */
+    left: 0;
+    background-color: black; /* Color of the underline */
+    transition: width .5s; 
+    transform-origin: bottom left;
+}
+
+a:hover {
+    color: black;
+}
+
+a:hover::after {
+    width: 100%; 
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 8vmin;
+}
+</style>
+
+<title>Underline Animation</title>
+<body>
+
+<a href="#">Hyperlink</a>
+
+</body>
