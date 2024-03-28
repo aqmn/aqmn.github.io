@@ -1,0 +1,26 @@
+<!-- <div style="position: relative; width: 200px; height: 50px; background-color:transparents; border-radius: 8px; overflow: hidden;">
+    <div style="
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          animation: changeText 4s infinite linear;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-family: sans-serif;
+        ">
+      <span id="greeting-text">Hello</span>
+    </div>
+  </div> -->
+  <div style="text-align: center;">  <span style="font-style: italic;" id="greeting-text">Hello</span> </div>
+
+
+  
+  <script>
+  let languages = ["無限進步", "Infinite progress", "무한 진보", "無限の進歩", "Unendlicher Fortschritt", "Des progrès infinis" ];
+  let index = 0;
+  setInterval(() => {
+    document.getElementById("greeting-text").textContent = languages[index++];
+    if (index >= languages.length) index = 0;
+  }, 1000);
+  </script>
