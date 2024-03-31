@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Give</title>
+    <link rel="icon" href="foto/icon1.png" type="image/x-icon">
+
+<style>
+    @font-face { font-family: cour; src: url("files/cour.ttf"); }
+    /* @font-face { font-family: cour; src: url("files/Ubuntu-R.ttf"); } */
+    body{
+        font-family: cour;
+        letter-spacing: 0px;
+    }
+
+
+    footer{
+        position: fixed;
+        width: 100%;
+        bottom: 0vh;
+        padding-bottom: 1vh;
+        text-align: center;
+        font-family: cour;
+        letter-spacing:-1px;
+        font-size: 10%;
+        background-color: white;
+    }
+    a{
+        color: inherit;
+    }
+
+    img{
+        width:10vmax;
+        height: 10vmax;
+    }
+
+    .popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #ccc;
+    background-color: #fff;
+    padding: 20px;
+    z-index: 1000;
+    width: 100vw; 
+    height: 100vh;
+    max-height: 100vh;
+    overflow-y: auto;
+    }
+
+    .popup-content {
+    text-align: center;
+    }
+
+    .close {
+        
+    position: fixed;
+    top: 10vh;
+    right: 10vw;
+    cursor: pointer;
+    /* z-index: 9999; */
+
+    }
+
+    .popexp:hover{
+        cursor: pointer;
+    }
+
+
+
+</style>
+</head>
+<body>
+<h1 style="padding-left: 3vw;padding-right: 3vw; letter-spacing: -2px">< <a href="https://blog.xoy.one">Yuin's Blog</a></h1>
+<hr>
+<h2 style="padding-left: 3vw;padding-right: 3vw;">Give</h2>
+<p style="padding-left: 10vw;padding-right: 10vw; letter-spacing: -.5px;text-align: center;"><i><q>If you pay peanuts, you get monkeys.</q></i>
+    -James Goldsmith</p>
+<div style="text-align: center; padding-top: 3vh;">
+    <div style="display: inline-block;"><b><a href="https://qr.alipay.com/fkx19965y8i3g8hta6fwy72?t=1662187041501">Alipay</a></b><br><img src="https://i.ibb.co/df4bbyg/alipay.png"  alt="Alipay"></div>
+    <div  style="display: inline-block;" ><b><a href="https://www.paypal.com/qrcodes/managed/73877812-7b0a-4c3c-ab83-e9b7c581d4a3?utm_source=nav_header_payment_hub">PayPal</a></b><br><img src="https://i.ibb.co/sjcRg7q/paypal.png"  alt="Paypal"></div> </div>
+<p style="padding-left: 10vw;padding-right: 10vw; letter-spacing: -.5px;text-align: center; padding-top: 2vh;">This is a voluntary donation webpage. All amount you give be used to make this site better<sup class="popexp" id="popupTrigger">[1]</sup>.</p>
+
+<div id="popup" class="popup">
+    <span class="close" id="closePopup" style="font-size: 1em;">[&times;]</span>
+    <div class="popup-content">
+      <h2 style="padding-top: 5vh; letter-spacing: -1px;">Donor Contribution Disclaimer</h2>
+
+
+        <p style="padding-left: 10vw;padding-right: 10vw; text-align: left;letter-spacing: -.5px;">
+            This document serves as a formal acknowledgment and disclaimer regarding financial contributions made to KH Entertainment (hereinafter referred to as "Party A", "we", "us", "our"). By the act of donating through this platform, donors (hereinafter referred to as "Party B", or "donor") acknowledge and consent to the following terms and conditions:
+            <br>
+            <br>
+            Purpose of Donation: The donor understands that all contributions made to us are expressly designated for the development and enhancement of our website and its associated services. 
+            We commits to utilizing the entirety of the funds received for the aforementioned purposes to improve user experience,
+             functionality, and the overall service offering of our digital platforms.
+             <br>
+             <br>
+            Agreement to Terms: By proceeding with a donation, the donor implicitly agrees to prioritize the optimization and development of our current website and services, above all else, with the understanding that this will benefit the broader user community and enhance the quality of services provided by us.
+            <br><br>
+            Voluntary Contributions: The donor acknowledges that all donations made to us are voluntary and non-refundable. 
+            The donor confirms that the decision to donate is made independently without any undue influence or expectation of direct personal benefit.
+            <br><br>
+            Feedback and Suggestions: We values the input and feedback of its donors and users. 
+            The donor is encouraged to share any comments, suggestions, 
+            or feedback regarding the use of donated funds or any aspect of our services by contacting the administrator at 
+            <a href="mailto:patron@xoy.one">patron@xoy.one</a>. We commits to considering all feedback in its ongoing efforts to improve its services and donor experience.
+            <br><br>
+            Transparency and Reporting: We pledges to maintain high levels of transparency regarding the allocation and utilization of donated funds.
+             Detailed reports may be made available upon request or at periodic intervals, as deemed appropriate by us, 
+             to ensure donors are informed about the impact of their contributions.
+             <br><br>
+            Modification of Terms: We reserves the right to modify the terms of this disclaimer or the intended use of donated funds as necessary to adapt to changing 
+            circumstances or for the overall benefit of our services and user community. Any such modifications will be communicated through appropriate channels.
+            <br><br>
+            Contact Information: For any inquiries, concerns, or additional information, The donor may contact us via <a href="mailto:patron@xoy.one">patron@xoy.one</a>.
+            <br><br>
+            By making a donation to us, the donor agrees to the terms outlined in this disclaimer. 
+            We expresses its deepest appreciation for the support and contributions of the donor, which play a vital role in the continued development and success of our services.
+        </p>
+        <span> </span>
+
+    </div>
+  </div>
+</body>
+<script>
+    document.getElementById("popupTrigger").addEventListener("click", function() {
+  document.getElementById("popup").style.display = "block";
+});
+
+document.getElementById("closePopup").addEventListener("click", function() {
+  document.getElementById("popup").style.display = "none";
+});
+</script>
+<footer >
+&copy; 2014-2024 <a href="https://khentmt.com">KH Entertainment</a> <br>
+</footer>
