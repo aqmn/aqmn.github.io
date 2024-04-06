@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face { font-family: op; src: url("fonts/Chirp-Medium.ttf"); } 
+
+        *{
+            font-family: op;
+            letter-spacing: -.5px;
+            
+        }
+        body {
+            text-align: center;
+            /* background-color: orangered; */
+            background-image: linear-gradient(to right, yellow, orangered, red );
+            padding-top: 25vh;
+            padding-bottom: 30vh;
+            /* line-height: 60px;    */
+        }
+
+        .give{
+            /* background-color: white, 0.5; */
+            background: rgba(255, 255, 255, .6);
+            -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+            /* opacity: 0.5; */
+            border: 0px;
+            border-radius: 999px;
+            height:6vmax;
+            font-size: 3.5vmax;
+            padding-left: 4vw;
+            padding-right: 4vw;
+            transition: 0.5s;
+            font-family: inherit;
+        }
+
+        
+
+        .give:hover{
+            background: rgba(255, 255, 255);
+            border: 3.5px solid lightgray;
+        }
+
+        .back{
+            color: inherit;
+            transition: 0.5s;
+            text-decoration: none;
+        }
+
+        .back:hover{
+            color:white
+        }
+
+    </style>
+</head>
+<body>
+    <p style="padding-left: 10vw; padding-right: 10vw; text-align: left; font-size: 4vmax; "><a class="back" href="">&leftarrow; Back</a></p>
+    <p style="padding-left: 15vw; padding-right: 15vw; text-align: left; font-size: 4vmax; ">
+        This is a voluntary funding page. We are a small-scale group dedicated to giving users a more unified and better detailed experience. If you appreciate our products, or if they make you feel interesting, consider making a donation. All your donations will be used to make the site better, even the smallest contribution. We offer Alipay and PayPal payment methods.    </p>
+<a class="btn" href="https://qr.alipay.com/fkx19965y8i3g8hta6fwy72?t=1662187041501"><button class="give">Alipay</button></a><p ></p>
+<a class="btn" href="https://www.paypal.com/qrcodes/managed/73877812-7b0a-4c3c-ab83-e9b7c581d4a3?utm_source=nav_header_payment_hub"><button class="give">PayPal</button></a>
+</body>
+</html>
