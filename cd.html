@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>customized details styles</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&display=swap');
+        body{
+            font-family: "Fira Mono", monospace;
+        }
+
+        details>summary::after{
+            content: "+";
+        }
+
+        details[open]>summary::after{
+            content: "-";
+        }
+
+        details > summary {
+            list-style-type: none;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-size: x-large;
+        }
+        
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
+
+        details>div{
+            padding-left: 10px;
+            border-left: 4px solid black;
+            margin: 5px 0px 0px;
+            letter-spacing: -1px;
+        }
+
+        
+    </style>
+</head>
+<body style="margin: 30vh 5vw 5vh;">
+    <details>
+        <summary>quote</summary>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, doloribus similique. Excepturi optio corporis beatae minus odit maiores harum eius, minima similique dolorem placeat expedita quo eaque commodi repellat labore alias at ipsam iure? Qui aut cum molestias a accusantium architecto cupiditate tempora veniam? Ea voluptas veritatis, fugit aperiam, amet facere minima ipsa commodi odio perspiciatis nisi minus aliquid quisquam velit ut atque tenetur, officia harum accusamus voluptatibus animi? Necessitatibus quos laudantium id dolor culpa reprehenderit vero optio fugiat accusamus exercitationem, doloribus alias nobis doloremque veniam eum odio tempore eos iste quis ad blanditiis unde. Praesentium asperiores dolorum optio fugiat?
+        </div>
+    </details>
+<br>
+    <details>
+        <summary>credits</summary>
+        <div >
+            John Doe<br>
+            John Doe<br>
+            John Doe<br>
+            John Doe<br>
+            John Doe<br>
+            John Doe<br>
+        </div>
+    </details>
+</body>
+</html>
