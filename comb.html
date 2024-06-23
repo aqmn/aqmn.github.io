@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel='stylesheet' href='https://xolyn.github.io/font.css'>
+    <style>
+        h1,h2,h3,h4,h5{font-weight:normal;font-size: 5vw; }
+        p{font-size: 3vw; }
+        body,*,html{font-family: nhr;}
+        .article{
+            margin: 5vh 5vw;
+        }
+        .timeline{
+        border-collapse: collapse;
+        font-size: large;
+    }
+
+    /* tr{border: none;} */
+
+    .timeline tr td:first-child{
+        border-right: 2px solid black;
+        text-align: right;
+        padding: 2vmin 4vmin 2vmin  0px;
+    }
+
+    .timeline tr td:last-child{
+        text-align: left;
+        padding: 2vmin  0 2vmin 4vmin;
+    }
+
+    .timeline tr td details[open]{
+        width: 60vmin;
+    }
+
+    .timeline tr td ul{padding: 0 0 0 4vmin;}
+    
+    .timeline tr td li{padding: 0;}
+
+    #tdnostyle{border-left: none; background: none;}
+    </style>
+</head>
+<body style="margin: 0;">
+<div style="position: relative; height: max-content;">
+<img style="width: 100%;  object-fit:cover; aspect-ratio: 2.5/1;" 
+src="
+https://images.unsplash.com/photo-1708660575990-101db3b00294?q=80&w=2274&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+" >
+<div style=" position: absolute; top:12vw; left:5vw; font-size: 8vw; color:white; font-family: nhr;">
+    <!-- Get what you craving. -->Fulfil what you dreamt for.
+<div style="width: min-content; white-space: nowrap; margin:2vh; padding: .5vh 1vw; border: 2px solid white; border-radius: 99px; text-decoration: none; color:inherit; font-size: 2vw;"   
+onclick="">
+    Enrol today</div>
+</div>
+
+<div class="article">
+    <h1 style="font-family: nhm;">Who are we</h1>
+<p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis fugit, magni eaque consequuntur eos exercitationem, libero ipsa tempore voluptatibus sint tempora necessitatibus porro cupiditate suscipit maiores nemo. Cum laudantium cupiditate quod, praesentium nam laboriosam quae natus deserunt perspiciatis error minima, blanditiis necessitatibus magnam magni iure illo placeat, reprehenderit illum eligendi at ipsam? Eveniet facere voluptatum pariatur quam eligendi deleniti, modi sit, laboriosam fugiat in vel. Vitae, blanditiis. Mollitia aut ad, quisquam laudantium ipsum vitae deserunt dolor odio iusto suscipit quasi laborum explicabo expedita libero alias iure? Blanditiis in, porro perferendis, enim sint atque facilis corrupti odit eius, accusamus nam eos.
+</p>
+
+<table class="timeline" style="margin: auto;">
+    <tr>
+      <td id="tdnostyle1"> Date</td>
+      <td id="tdnostyle1">Events</td>
+    </tr>
+    <tr>
+      <td>2020-05-14</td>
+      <td>
+        <details>
+            <summary>Event1</summary>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores ipsam quaerat numquam reprehenderit rerum est eligendi consectetur repellendus, ut tempora saepe eius, modi odit molestias maiores. Quam pariatur nam exercitationem.
+        </details>
+      </td>
+    </tr>
+
+    <tr>
+        <td>2021-09-12</td>
+        <td>Event2</td>
+      </tr>
+
+    <tr>
+        <td>2022-08-07</td>
+        <td>
+            <details>
+                <summary>Event3</summary>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit soluta voluptate dolorum eum excepturi, perferendis tempore reiciendis. Quos, laborum delectus.
+            </details>
+        </td>
+    </tr>
+
+    <tr>
+        <td>2023-11-02</td>
+        <td>
+            <details>
+                <summary>Event3</summary>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores laboriosam incidunt optio fugiat? Dolor voluptates quibusdam porro voluptas ipsum enim accusantium vero nisi ipsa fugit.
+            </details>
+        </td>
+    </tr>
+</table>
+
+<p><br><hr><br></p>
+<table class="timeline" style="margin: auto;">
+    <tr>
+      <td id="tdnostyle1">Version</td>
+      <td id="tdnostyle1">Events</td>
+    </tr>
+    <tr>
+      <td><code>1.0.1</code></td>
+      <td>
+            <ul>
+                <li>fix error</li>
+                <li>add features</li>
+            </ul>
+      </td>
+    </tr>
+
+    <tr>
+        <td><code>1.0.2</code></td>
+        <td>
+            <ul>
+                <li>fix error</li>
+                <li>add features</li>
+            </ul>
+        </td>
+      </tr>
+
+    <tr>
+        <td><code>1.0.3</code></td>
+        <td>
+            <ul>
+                <li>fix error</li>
+                <li>add features</li>
+            </ul>
+        </td>
+    </tr>
+
+    <tr>
+        <td><code>1.1.1</code></td>
+        <td>
+            <ul>
+                <li>fix error</li>
+                <li>add features</li>
+            </ul>
+        </td>
+    </tr>
+</table>
+
+
+<p><br><br></p>
+</div>
+
+</div>
+</body>
+</html>
