@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<link rel='stylesheet' href='https://xolyn.github.io/font.css'>
+<title>Document</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cousine:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+a{color: inherit; transition: text-shadow 1s;}
+a:hover{text-shadow:     
+    0 0 5px white, 
+    0 0 10px white, 
+    0 0 20px white, 
+    0 0 40px white,
+    0 0 80px white, 
+    0 0 120px white; }
+</style>
+</head>
+<body style="margin: 0;	background-color: #222; font-family: Cousine; color:white; font-size: 1.5rem;">
+<div class="all" style="width: 100dvw; height: 100dvh; display: flex;">
+    <div class="content" style="margin: auto;text-align: center;">
+        <div class="random" style="letter-spacing: -5px;">
+            <span class="nbr">#</span>
+            <span class="nbr">@</span>
+            <span class="nbr">&</span>
+            <span class="nbr">*</span>
+            <span class="nbr">)</span>
+            <!-- <span class=r ltr">0</span> -->
+            <span class="nbr">&gt;</span><br>
+            <span class="nbr">!</span>
+            <span class="nbr">?</span>
+            <span class="nbr">+</span>
+            <span class="nbr">(</span>
+        </div>
+
+        <p>
+            <a style="font-size: smaller;" href="mailto:lz568@cornell.edu">Contact</a>
+        </p>
+
+    </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const randomElements = document.querySelectorAll(".nbr");
+  const timer = 15;
+  let data = 0;
+  let index;
+  let change;
+  const letters = 'LingyuZhou'.split('');
+  const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()'; // Character set for shuffling
+
+  // Assign a random "data-change" attribute to each element
+  randomElements.forEach(element => {
+    change = Math.round(Math.random() * 100);
+    element.setAttribute("data-change", change);
+  });
+
+  // Generate a random character from the character set
+  function randomCharacter() {
+    const randomIndex = Math.floor(Math.random() * characters.length);
+    return characters[randomIndex];
+  }
+
+  // Select a random element index
+  function select() {
+    return Math.floor(Math.random() * randomElements.length);
+  }
+
+  // Update the values of elements
+  function value() {
+    const selectedIndex = select();
+    const selectedElement = randomElements[selectedIndex];
+    if (selectedElement) {
+      selectedElement.textContent = randomCharacter(); // Use random character
+      selectedElement.setAttribute("data-number", data);
+    }
+    data++;
+
+    randomElements.forEach((element, i) => {
+      const dataNumber = parseInt(element.getAttribute("data-number"), 10);
+      const dataChange = parseInt(element.getAttribute("data-change"), 10);
+      if (dataNumber > dataChange) {
+        index = Array.from(randomElements).indexOf(element);
+        element.textContent = letters[index];
+        element.classList.remove("nbr");
+      }
+    });
+  }
+
+  const interval = setInterval(value, timer);
+});
+
+</script>
+</body>
+</html>
