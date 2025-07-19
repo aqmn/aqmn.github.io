@@ -1,7 +1,18 @@
+---
+layout: compress
+---
+
 <!DOCTYPE html>
-<html lang="{{ site.locale | default: 'en' }}">
-  {%- include head.html -%}
-  <body class="body-{{ page.layout }}">
-    {{ content }}
+<html lang="en" >
+  {% include head.html %}  
+  <body>
+    <main>
+	    
+	    {% include navigation.html %}
+	    
+        {{ content }}
+        	    
+    </main>
+            
   </body>
 </html>

@@ -1,6 +1,7 @@
-*.gem
-.bundle
+tmp
+*.rdb
+.env
 .sass-cache
-_site
-Gemfile.lock
-node_modules
+.DS_Store
+.jekyll-cache
+.git
